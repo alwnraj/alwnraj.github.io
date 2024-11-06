@@ -41,6 +41,13 @@ h2 {
     padding-bottom: 5px;
 }
 
+.project-description {
+    margin-left: 20px; /* Adjust as needed to align with the bullet point */
+    font-size: 1em; /* Optional: adjust the font size for the description */
+    color: #2f2f2f; /* Optional: set the text color */
+}
+
+
 p,
 div,
 ul,
