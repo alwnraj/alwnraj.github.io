@@ -15,6 +15,19 @@
         <meta name="theme-color" content="#ffffff" />
         <link rel="canonical" href="https://alwnraj.github.io/" />
     </head>
+    <script>
+        function openModal(image) {
+            const modal = document.getElementById("imageModal");
+            const modalImage = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImage.src = image.src;
+        }
+    
+        function closeModal() {
+            const modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
+    </script>
     <body>
         <div class="content-wrapper">
             <div class="text-content">
@@ -30,22 +43,36 @@
                 I am also working with Dr.Baidya on Computer Vision algorithms, mainly for the use on drones.
                 </p>
                 <h2>Personal Projects</h2>
+
                 <li>
                     <a href="https://www.github.com/alwnraj/chat-app">Real-Time Chat application with Python, Flask & SocketIO</a>
-                    <p class="project-description">A real-time chat application built using Python, Flask, and SocketIO, allowing users to create chat rooms and send messages instantly.</p>
+                    <p class="project-description">
+                        A real-time chat application built using Python, Flask, and SocketIO, allowing users to create chat rooms and send messages instantly.
+                    </p>
+                    <img src="chatapp.png" alt="Chat App Screenshot" class="project-thumbnail" onclick="openModal(this)" />
                 </li>
+
                 <li>
                     <a href="https://www.github.com/alwnraj/pong">Classic Pong Game with Python and Pygame</a>
                     <p class="project-description">Created a fully functional 2D Pong game using Python and the Pygame library</p>
                 </li>
+
                 <li>
                     <a href="https://www.github.com/alwnraj/Space-invaders">2D Retro Space Invaders Game in C++",</a>
                     <p class="project-description">Independently designed and developed a fully functional 2D Retro Space Invaders game in C++ using Raylib, without the use of game engines.</p>
+                    <img src="spaceinvaders.png" alt="Chat App Screenshot" class="project-thumbnail" onclick="openModal(this)" />
                 </li>
+
                 <!--
                 <h2>Notable Blogs</h2>
                 <li><a href="https://alwnraj.github.io/blog/welcome-to-jekyll/" target="_blank">welcome-to-jekyll</a></li>
                 -->
+            </div>
+
+            <!-- Modal -->
+            <div id="imageModal" class="modal" onclick="closeModal()">
+                <span class="modal-close" onclick="closeModal()">&times;</span>
+                <img class="modal-content" id="modalImage" />
             </div>
 
             <div class="image-container">
@@ -56,7 +83,7 @@
         <nav>
             <a href="https://github.com/alwnraj" target="_blank">Github</a> //
             <a href="https://www.linkedin.com/in/alwinrajkumar" target="_blank">linkedin</a> //
-            <a href="https://alwnraj.github.io/blog/" target="_blank">Blog</a> //
+            <!--<a href="https://alwnraj.github.io/blog/" target="_blank">Blog</a> // -->
             <a href="Resume.pdf" target="_blank">Resume</a> //
             <a href="https://alwinrajkumar.vercel.app/" target="_blank"> :)</a>
         </nav>
