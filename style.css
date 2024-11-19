@@ -164,72 +164,26 @@ nav {
     margin-top: 20px;
 }
 
-@/* Improved readability and layout for mobile devices */
+/* Improved readability and layout for mobile devices */
+
+
 @media (max-width: 768px) {
-    body {
-        font-size: 1.2em; /* Slightly larger font for readability on tablets */
-        padding: 15px; /* Add some padding for cleaner layout */
-    }
-
     .content-wrapper {
-        flex-direction: column; /* Stack elements vertically */
-        gap: 25px; /* Slightly larger gap for better separation */
+        flex-direction: column;
     }
 
-    h2 {
-        font-size: 1.4em; /* Make headings more prominent */
-        text-align: center; /* Center-align headings for mobile */
+    .image-container {
+        order: -1;
+        margin-bottom: 20px;
     }
 
-    .text-content {
-        text-align: left; /* Left-align text for consistency */
-        padding: 0 10px; /* Add padding for breathing space */
-    }
-
-    .profile-image {
-        max-width: 200px; /* Slightly larger profile image for better visibility */
-        margin: 20px auto; /* Add spacing and center it */
-    }
-
-    nav {
-        font-size: 1em; /* Keep navigation links readable */
-        margin-top: 15px;
-    }
-
-    .project-thumbnail {
-        width: 150px; /* Adjust thumbnail size for better clarity */
-        margin: 10px auto; /* Ensure centered alignment */
-    }
-
-    .project-description {
-        font-size: 1em; /* Standardize description size */
-        margin: 5px auto; /* Reduce spacing for a cleaner look */
-    }
-}
-
-@media (max-width: 480px) {
     body {
-        font-size: 1.1em; /* Further increase font size for readability */
-    }
-
-    h2 {
-        font-size: 1.3em; /* Make headings more prominent */
-    }
-
-    .project-thumbnail {
-        width: 120px; /* Reduce thumbnail size for very small screens */
-    }
-
-    .project-description {
-        font-size: 0.9em; /* Keep descriptions smaller but readable */
-        line-height: 1.5; /* Add space for readability */
+        font-size: 1.1em;
     }
 
     .profile-image {
-        max-width: 180px; /* Adjust for small screens */
-    }
-
-    nav {
-        font-size: 0.9em; /* Ensure navigation links fit */
+        max-width: 200px;
+        margin: 0 auto;
+        display: block;
     }
 }
