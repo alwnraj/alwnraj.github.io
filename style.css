@@ -178,11 +178,11 @@ nav {
     }
 
     body {
-        font-size: 1em;
+        font-size: 0.5em;
     }
 
     .profile-image {
-        max-width: 100px;
+        max-width: 150px;
         margin: 0 auto;
         display: block;
     }
