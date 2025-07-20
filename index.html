@@ -1,20 +1,58 @@
 <!doctype html>
 <html>
     <head>
-        <title>Alwin's Website</title>
+        <title>Alwin Rajkumar - Computer Science Student & AI Researcher | University of Louisville</title>
         <link rel="stylesheet" type="text/css" href="style.css" />
         <link rel="icon" type="image/png" href="my-notion-face-transparent.png" />
         <meta charset="UTF-8" />
-        <meta name="description" content="personal website for Alwin Rajkumar" />
+        <meta name="description" content="Alwin Rajkumar is a Computer Science & Engineering student at University of Louisville. AI researcher working on computer vision and generative AI. View projects in Python, C++, JavaScript and machine learning." />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta
-            name="keywords"
-            content="alwinraj, alwin, alwin, alwnraj, Alwin Rajkumar, uofl"
-        />
-        <meta name="author" content="alwinrajkumar" />
+        <meta name="keywords" content="Alwin Rajkumar, Computer Science, AI Researcher, University of Louisville, Python Developer, Machine Learning, Computer Vision, Software Engineer, alwnraj, GenAI research" />
+        <meta name="author" content="Alwin Rajkumar" />
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://alwnraj.github.io/" />
+        <meta property="og:title" content="Alwin Rajkumar - Computer Science Student & AI Researcher" />
+        <meta property="og:description" content="AI researcher and CS student at University of Louisville. Working on computer vision and generative AI with published research." />
+        <meta property="og:image" content="https://alwnraj.github.io/profile_picture.jpeg" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://alwnraj.github.io/" />
+        <meta property="twitter:title" content="Alwin Rajkumar - Computer Science Student & AI Researcher" />
+        <meta property="twitter:description" content="AI researcher and CS student at University of Louisville. Working on computer vision and generative AI with published research." />
+        <meta property="twitter:image" content="https://alwnraj.github.io/profile_picture.jpeg" />
 
         <meta name="theme-color" content="#ffffff" />
         <link rel="canonical" href="https://alwnraj.github.io/" />
+        
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Alwin Rajkumar",
+            "url": "https://alwnraj.github.io/",
+            "image": "https://alwnraj.github.io/profile_picture.jpeg",
+            "sameAs": [
+                "https://github.com/alwnraj",
+                "https://www.linkedin.com/in/alwinrajkumar/",
+                "https://scholar.google.com/citations?user=WreVjDMAAAAJ&hl=en"
+            ],
+            "jobTitle": "Computer Science Student & AI Researcher",
+            "worksFor": {
+                "@type": "EducationalOrganization",
+                "name": "University of Louisville"
+            },
+            "alumniOf": {
+                "@type": "EducationalOrganization",
+                "name": "University of Louisville"
+            },
+            "knowsAbout": ["Artificial Intelligence", "Computer Vision", "Machine Learning", "Python Programming", "Software Development"],
+            "email": "alwin.rajkumar@louisville.edu"
+        }
+        </script>
     </head>
     <script>
         function openModal(image) {
@@ -46,6 +84,11 @@
                 In my research with Dr.Bego I  co-authored a paper "Expertise and Trust in GenAI". 
                 I am also working with Dr.Baidya on Computer Vision algorithms, mainly for the use on drones.
                 </p>
+
+                <h2>Research & Publications</h2>
+                
+                <li><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WreVjDMAAAAJ&citation_for_view=WreVjDMAAAAJ:u5HHmVD_uO8C" target="_blank">Expertise and Trust in GenAI</a></li>
+
                 <h2>Personal Projects</h2>
 
                 <li>
@@ -53,26 +96,26 @@
                     <p class="project-description">
                         A real-time chat application built using Python, Flask, and SocketIO, allowing users to create chat rooms and send messages instantly.
                     </p>
-                    <img src="chatapp.png" alt="Chat App Screenshot" class="project-thumbnail" onclick="openModal(this)" />
+                    <img src="chatapp.png" alt="Real-time chat application interface showing multiple chat rooms and message history" class="project-thumbnail" onclick="openModal(this)" />
                 </li>
 
                 <li>
                     <a href="https://www.github.com/alwnraj/pong">Classic Pong Game with Python and Pygame</a>
                     <p class="project-description">Created a fully functional 2D Pong game using Python and the Pygame library</p>
-                    <img src="pong.png" alt="pongjpg" class="project-thumbnail" onclick="openModal(this)" />
+                    <img src="pong.png" alt="Classic Pong game screenshot showing paddles, ball, and score display" class="project-thumbnail" onclick="openModal(this)" />
                 </li>
 
                 <li>
                     <a href="https://www.github.com/alwnraj/Space-invaders">2D Retro Space Invaders Game in C++</a>
                     <p class="project-description">Independently designed and developed a fully functional 2D Retro Space Invaders game in C++ using Raylib, without the use of game engines.</p>
-                    <img src="spaceinvaders.png" alt="space invaders png" class="project-thumbnail" onclick="openModal(this)" />
+                    <img src="spaceinvaders.png" alt="Space Invaders game screenshot with alien enemies, player ship, and retro graphics" class="project-thumbnail" onclick="openModal(this)" />
                 </li>
 
                 <li>
                     <a href="https://www.github.com/alwnraj/smolmachine">Machine Learning using MobileNet in Javascript</a>
                     <p class="project-description">Created a browser-based tool for image classification using a pre-trained machine learning model, 
                         MobileNet. The tool allows you to classify images and even train the machine to distinguish between two sets of images. <a class="ho" href="https://alwnraj.github.io/smolmachine/" target="_blank"> Demo</a></p>
-                    <img src="smolmachine.png" alt="SmolMachineimage" class="project-thumbnail" onclick="openModal(this)" />
+                    <img src="smolmachine.png" alt="SmolMachine web interface for image classification using MobileNet neural network" class="project-thumbnail" onclick="openModal(this)" />
                 </li>
 
                 <!--
@@ -88,7 +131,7 @@
             </div>
 
             <div class="image-container">
-                <img src="profile_picture.jpeg" alt="image" class="profile-image" />
+                <img src="profile_picture.jpeg" alt="Alwin Rajkumar - Computer Science student and AI researcher at University of Louisville" class="profile-image" />
             </div>
         </div>
         <hr /> <!-- this makes a line -->
