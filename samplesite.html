@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Alwin Rajkumar - AI Researcher & CS Student</title>
+        <!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
+        <link rel="icon" type="image/webp" href="my-notion-face-transparent.webp" />
+        <meta charset="UTF-8" />
+        <meta name="description" content="Alwin Rajkumar is a Computer Science & Engineering student at University of Louisville. AI researcher working on computer vision and generative AI. View projects in Python, C++, JavaScript and machine learning." />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Alwin Rajkumar, Computer Science, AI Researcher, University of Louisville, Python Developer, Machine Learning, Computer Vision, Software Engineer, alwnraj, GenAI research" />
+        <meta name="author" content="Alwin Rajkumar" />
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://alwnraj.github.io/" />
+        <meta property="og:title" content="Alwin Rajkumar - Computer Science Student & AI Researcher" />
+        <meta property="og:description" content="AI researcher and CS student at University of Louisville. Working on computer vision and generative AI with published research." />
+        <meta property="og:image" content="https://alwnraj.github.io/profile_picture.webp" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://alwnraj.github.io/" />
+        <meta property="twitter:title" content="Alwin Rajkumar - Computer Science Student & AI Researcher" />
+        <meta property="twitter:description" content="AI researcher and CS student at University of Louisville. Working on computer vision and generative AI with published research." />
+        <meta property="twitter:image" content="https://alwnraj.github.io/profile_picture.webp" />
+
+        <meta name="theme-color" content="#ffffff" />
+        <link rel="canonical" href="https://alwnraj.github.io/" />
+        
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Alwin Rajkumar",
+            "url": "https://alwnraj.github.io/",
+            "image": "https://alwnraj.github.io/profile_picture.webp",
+            "sameAs": [
+                "https://github.com/alwnraj",
+                "https://www.linkedin.com/in/alwinrajkumar/",
+                "https://scholar.google.com/citations?user=WreVjDMAAAAJ&hl=en"
+            ],
+            "jobTitle": "Computer Science Student",
+            "worksFor": {
+                "@type": "EducationalOrganization",
+                "name": "University of Louisville"
+            },
+            "alumniOf": {
+                "@type": "EducationalOrganization",
+                "name": "University of Louisville"
+            },
+            "knowsAbout": ["Artificial Intelligence", "Computer Vision", "Machine Learning", "Python Programming", "Software Development"],
+            "email": "alwin.rajkumar@louisville.edu"
+        }
+        </script>
+
+        <style>
+            /* Reset and base styles */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'ZT Formom', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+                line-height: 1.4;
+                color: #e2e8f0;
+                background: #1a1a1a;
+                font-size: 17px;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            /* Container */
+            .container {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px 30px 30px 30px;
+            }
+
+            /* Header */
+            .header {
+                margin-bottom: 20px;
+            }
+
+            .header-content {
+                display: flex;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .profile-section {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                width: 100%;
+            }
+
+            .profile-image {
+                width: 200px;
+                height: 200px;
+                border-radius: 4px;
+                object-fit: cover;
+                border: 1px solid #404040;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            }
+
+            .profile-info {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 200px;
+            }
+
+            .name {
+                font-size: 2em;
+                font-weight: 600;
+                color: #f8fafc;
+                margin: 0;
+                letter-spacing: -0.025em;
+            }
+
+            .title {
+                font-size: 1.2em;
+                color: #d1d5db;
+                margin: 0;
+                font-weight: 500;
+            }
+
+            .subtitle {
+                font-size: 1.1em;
+                color: #9ca3af;
+                margin: 0;
+                font-weight: 400;
+            }
+
+            .contact-links {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                margin-top: auto;
+            }
+
+            .contact-link {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                color: #d1d5db;
+                text-decoration: none;
+                font-size: 15px;
+                padding: 0;
+                transition: color 0.2s ease;
+            }
+
+            .contact-link:hover {
+                color: #60a5fa;
+            }
+
+            .contact-link svg {
+                color: #9ca3af;
+                transition: color 0.2s ease;
+            }
+
+            .contact-link:hover svg {
+                color: #60a5fa;
+            }
+
+            /* Main content */
+            .main-content {
+                margin-bottom: 20px;
+            }
+
+            .content-section {
+                margin-bottom: 20px;
+            }
+
+            .content-section h2 {
+                font-size: 1.3em;
+                font-weight: 600;
+                color: #f8fafc;
+                margin: 0 0 8px 0;
+                padding-bottom: 4px;
+                border-bottom: 1px solid #404040;
+            }
+
+            .content-section p {
+                margin: 0 0 6px 0;
+                color: #d1d5db;
+                line-height: 1.4;
+            }
+
+            /* Publications */
+            .publication-item {
+                margin-bottom: 4px;
+            }
+
+            .publication-link {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                color: #f8fafc;
+                text-decoration: none;
+                padding: 0;
+                transition: color 0.2s ease;
+            }
+
+            .publication-link:hover {
+                color: #60a5fa;
+            }
+
+            .publication-title {
+                font-weight: 500;
+            }
+
+            .external-link-icon {
+                color: #9ca3af;
+                flex-shrink: 0;
+            }
+
+            .publication-link:hover .external-link-icon {
+                color: #60a5fa;
+            }
+
+            /* Projects */
+            .project-grid {
+                display: grid;
+                gap: 0;
+            }
+
+            .project-card {
+                border: none;
+                background: none;
+                padding: 20px 0;
+                box-shadow: none;
+                position: relative;
+                border-bottom: 1px solid #2a2a2a;
+            }
+
+            .project-card:last-child {
+                border-bottom: none;
+            }
+
+            .project-card::before {
+                display: none;
+            }
+
+            .project-card:hover {
+                transform: none;
+                box-shadow: none;
+                border-color: transparent;
+                background: none;
+            }
+
+            .project-header {
+                margin-bottom: 8px;
+            }
+
+            .project-title {
+                font-size: 1.2em;
+                font-weight: 600;
+                margin-bottom: 6px;
+            }
+
+            .project-title a {
+                color: #f8fafc;
+                text-decoration: none;
+                transition: color 0.2s ease;
+            }
+
+            .project-title a:hover {
+                color: #60a5fa;
+            }
+
+            .project-tech {
+                font-size: 15px;
+                color: #9ca3af;
+                font-weight: 500;
+                padding: 0;
+                background: none;
+                border-radius: 0;
+                display: inline;
+                border: none;
+            }
+
+            .project-description {
+                color: #d1d5db;
+                margin-bottom: 16px;
+                line-height: 1.4;
+                font-size: 16px;
+            }
+
+            .project-thumbnail {
+                width: 150px;
+                height: auto;
+                border-radius: 4px;
+                border: 1px solid #404040;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                margin: 0 0 0 20px;
+            }
+
+            .project-thumbnail:hover {
+                transform: scale(1.02);
+                box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+                border-color: #60a5fa;
+            }
+
+            /* Links */
+            a {
+                color: #60a5fa;
+                text-decoration: none;
+                transition: color 0.2s ease;
+                font-weight: 500;
+            }
+
+            a:hover {
+                color: #93c5fd;
+                text-decoration: underline;
+            }
+
+            .demo-link {
+                font-weight: 600;
+                color: #a78bfa;
+            }
+
+            .demo-link:hover {
+                color: #c4b5fd;
+            }
+
+            /* Footer */
+            .footer {
+                border-top: 1px solid #404040;
+                padding-top: 20px;
+                margin-top: 20px;
+                text-align: center;
+            }
+
+            .footer-nav {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 16px;
+                flex-wrap: wrap;
+            }
+
+            .nav-link {
+                color: #9ca3af;
+                text-decoration: none;
+                font-size: 15px;
+                font-weight: 500;
+                transition: color 0.2s ease;
+                padding: 0;
+                border-radius: 0;
+                background: none;
+                border: none;
+                backdrop-filter: none;
+            }
+
+            .nav-link:hover {
+                color: #60a5fa;
+                background: none;
+                border-color: transparent;
+                transform: none;
+            }
+
+            .nav-separator {
+                color: #6b7280;
+                font-weight: 300;
+            }
+
+            /* Modal */
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.9);
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+                backdrop-filter: blur(8px);
+            }
+
+            .modal-content {
+                position: relative;
+                max-width: 90%;
+                max-height: 90%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .modal-image {
+                max-width: 100%;
+                max-height: 100%;
+                width: auto;
+                height: auto;
+                object-fit: contain;
+                border-radius: 8px;
+                box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+                border: 2px solid rgba(59, 130, 246, 0.3);
+            }
+
+            .modal-close {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                color: #ffffff;
+                font-size: 32px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: color 0.2s ease;
+                z-index: 1001;
+            }
+
+            .modal-close:hover {
+                color: #fbbf24;
+                background: rgba(59, 130, 246, 0.3);
+                transform: scale(1.1);
+            }
+
+            /* Responsive design */
+            @media (max-width: 600px) {
+                .container {
+                    padding: 20px 20px 30px 20px;
+                }
+                
+                .profile-section {
+                    flex-direction: column;
+                    gap: 15px;
+                    text-align: center;
+                }
+                
+                .profile-image {
+                    width: 100px;
+                    height: 100px;
+                    margin: 0 auto;
+                }
+                
+                .name {
+                    font-size: 1.7em;
+                }
+                
+                .contact-links {
+                    align-items: center;
+                }
+                
+                .project-thumbnail {
+                    margin: 0 auto;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!-- Header Section -->
+            <header class="header">
+                <div class="header-content">
+                    <div class="profile-section">
+                        <picture>
+                    <source srcset="profile_picture.webp" type="image/webp">
+                    <img src="profile_picture.jpeg" alt="Alwin Rajkumar" class="profile-image" />
+                </picture>
+                        <div class="profile-info">
+                            <h1 class="name">Alwin Rajkumar</h1>
+                            <p class="title">Computer Science & Engineering Student</p>
+                            <p class="subtitle">University of Louisville</p>
+                            <div class="contact-links">
+                                <a href="mailto:alwin.rajkumar@louisville.edu" class="contact-link">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
+                                    alwin.rajkumar@louisville.edu
+                                </a>
+                                <a href="https://github.com/alwnraj" target="_blank" class="contact-link">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-1.94-2.63c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    </svg>
+                                    GitHub
+                                </a>
+                                <a href="https://www.linkedin.com/in/alwinrajkumar/" target="_blank" class="contact-link">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                        <rect x="2" y="9" width="4" height="12"/>
+                                        <circle cx="4" cy="4" r="2"/>
+                                    </svg>
+                                    LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <section class="content-section">
+                    <h2>About</h2>
+                    <p>I'm a senior at the University of Louisville studying Computer Science & Engineering. I love solving hard problems with new and interesting solutions. I've open-sourced a number of my projects on <a href="https://github.com/alwnraj">GitHub</a>. I am looking for Spring 2026 Internships so feel free to connect with me on <a href="https://www.linkedin.com/in/alwinrajkumar/">LinkedIn</a> or write me an <a href="mailto:alwin.rajkumar@louisville.edu">email</a>.</p>
+                    <p>See more on my <a href="Resume.pdf" target="_blank">resume</a>.</p>
+                </section>
+
+                <section class="content-section">
+                    <h2>Current Work</h2>
+                    <p>At the moment, I'm working with two professors, mainly with <a href="https://engineering.louisville.edu/faculty/campbell-bego/">Dr. Bego</a> and <a href="https://engineering.louisville.edu/faculty/sabur-h-baidya/">Dr. Baidya</a>. In my research with Dr. Bego I co-authored a paper "Expertise and Trust in GenAI". I am also working with Dr. Baidya on Computer Vision algorithms, mainly for use on drones.</p>
+                </section>
+
+                <section class="content-section">
+                    <h2>Research & Publications</h2>
+                    <div class="publication-item">
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WreVjDMAAAAJ&citation_for_view=WreVjDMAAAAJ:u5HHmVD_uO8C" target="_blank" class="publication-link">
+                            <span class="publication-title">Expertise and Trust in GenAI</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="external-link-icon">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                <polyline points="15,3 21,3 21,9"/>
+                                <line x1="10" y1="14" x2="21" y2="3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2>Personal Projects</h2>
+                    
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">
+                                    <a href="https://www.github.com/alwnraj/chat-app" target="_blank">Real-Time Chat Application</a>
+                                </h3>
+                                <div class="project-tech">Python • Flask • SocketIO</div>
+                            </div>
+                            <p class="project-description">A real-time chat application allowing users to create chat rooms and send messages instantly.</p>
+                            <picture>
+                        <source srcset="chatapp.webp" type="image/webp">
+                        <img src="chatapp.png" alt="Real-time chat application interface" class="project-thumbnail" onclick="openModal(this)" />
+                    </picture>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">
+                                    <a href="https://www.github.com/alwnraj/pong" target="_blank">Classic Pong Game</a>
+                                </h3>
+                                <div class="project-tech">Python • Pygame</div>
+                            </div>
+                            <p class="project-description">A fully functional 2D Pong game with smooth gameplay and scoring system.</p>
+                            <picture>
+                        <source srcset="pong.webp" type="image/webp">
+                        <img src="pong.png" alt="Classic Pong game screenshot" class="project-thumbnail" onclick="openModal(this)" />
+                    </picture>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">
+                                    <a href="https://www.github.com/alwnraj/Space-invaders" target="_blank">Space Invaders Game</a>
+                                </h3>
+                                <div class="project-tech">C++ • Raylib</div>
+                            </div>
+                            <p class="project-description">Independently designed and developed a fully functional 2D Retro Space Invaders game without using game engines.</p>
+                            <picture>
+                        <source srcset="spaceinvaders.webp" type="image/webp">
+                        <img src="spaceinvaders.png" alt="Space Invaders game screenshot" class="project-thumbnail" onclick="openModal(this)" />
+                    </picture>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">
+                                    <a href="https://www.github.com/alwnraj/smolmachine" target="_blank">SmolMachine</a>
+                                </h3>
+                                <div class="project-tech">JavaScript • MobileNet • TensorFlow.js</div>
+                            </div>
+                            <p class="project-description">A browser-based tool for image classification using pre-trained machine learning models. <a href="https://alwnraj.github.io/smolmachine/" target="_blank" class="demo-link">Live Demo</a></p>
+                            <picture>
+                        <source srcset="smolmachine.webp" type="image/webp">
+                        <img src="smolmachine.png" alt="SmolMachine web interface" class="project-thumbnail" onclick="openModal(this)" />
+                    </picture>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer Navigation -->
+            <footer class="footer">
+                <nav class="footer-nav">
+                    <a href="https://github.com/alwnraj" target="_blank" class="nav-link">GitHub</a>
+                    <span class="nav-separator">/</span>
+                    <a href="https://www.linkedin.com/in/alwinrajkumar" target="_blank" class="nav-link">LinkedIn</a>
+                    <span class="nav-separator">/</span>
+                    <a href="Resume.pdf" target="_blank" class="nav-link">Resume</a>
+                    <span class="nav-separator">/</span>
+                    <a href="https://alwnrajkumar.vercel.app/" target="_blank" class="nav-link">:)</a>
+                </nav>
+            </footer>
+        </div>
+
+        <!-- Image Modal -->
+        <div id="imageModal" class="modal" onclick="closeModal()">
+            <div class="modal-content">
+                <span class="modal-close" onclick="closeModal()">&times;</span>
+                <img class="modal-image" id="modalImage" />
+            </div>
+        </div>
+
+        <script>
+            function openModal(image) {
+                const modal = document.getElementById("imageModal");
+                const modalImage = document.getElementById("modalImage");
+                modal.style.display = "flex";
+                modalImage.src = image.src;
+            }
+        
+            function closeModal() {
+                const modal = document.getElementById("imageModal");
+                modal.style.display = "none";
+            }
+
+            // Close modal when clicking outside the image
+            document.getElementById("imageModal").addEventListener("click", function(e) {
+                if (e.target === this) {
+                    closeModal();
+                }
+            });
+        </script>
+    </body>
+</html>
