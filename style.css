@@ -1,12 +1,12 @@
 body {
-    background: white;
-    color: black;
+    background: #fffcf2;
+    color: #2c2c2c;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     max-width: 600px;
     margin: 0 auto;
     padding: 40px 20px;
     line-height: 1.6;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .profile-image {
@@ -16,13 +16,14 @@ body {
     object-fit: cover;
     margin: 0 auto 40px auto;
     display: block;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     font-size: 1.5em;
     font-weight: 600;
     margin: 40px 0 20px 0;
-    color: black;
+    color: #2c2c2c;
 }
 
 p {
@@ -31,7 +32,7 @@ p {
 
 .project-description {
     margin: 10px 0 20px 0;
-    color: #666;
+    color: #555;
     font-size: 0.95em;
 }
 
@@ -41,12 +42,14 @@ p {
     object-fit: cover;
     border-radius: 8px;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     border: 2px solid #2f2f2f;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .project-thumbnail:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 li {
@@ -55,16 +58,16 @@ li {
 }
 
 a {
-    color: black;
+    color: #2c2c2c;
     text-decoration: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #2c2c2c;
     padding-bottom: 2px;
     transition: all 0.2s ease;
 }
 
 a:hover {
-    background-color: black;
-    color: white;
+    background-color: #2c2c2c;
+    color: #fffcf2;
     padding: 2px 4px;
     border-radius: 3px;
 }
@@ -123,40 +126,152 @@ nav {
     to { transform: scale(1); }
 }
 
-/* Mobile responsive */
+/* Enhanced Mobile responsive design */
 @media (max-width: 768px) {
     body {
-        padding: 20px 15px;
-        font-size: 16px;
+        padding: 25px 20px;
+        font-size: 17px;
+        line-height: 1.7;
     }
     
     .profile-image {
+        width: 160px;
+        height: 160px;
+        margin-bottom: 30px;
+    }
+    
+    h2 {
+        font-size: 1.6em;
+        margin: 30px 0 15px 0;
+    }
+    
+    .project-thumbnail {
         width: 180px;
-        height: 180px;
+        height: 110px;
+        margin: 10px 0;
+    }
+    
+    .project-description {
+        margin: 8px 0 15px 0;
+        font-size: 0.9em;
+    }
+    
+    li {
+        margin-bottom: 25px;
+    }
+    
+    p {
+        margin-bottom: 18px;
+    }
+    
+    nav {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px 15px;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    
+    .profile-image {
+        width: 140px;
+        height: 140px;
+        margin-bottom: 25px;
     }
     
     h2 {
         font-size: 1.3em;
+        margin: 25px 0 12px 0;
     }
     
     .project-thumbnail {
         width: 160px;
         height: 100px;
+        margin: 8px 0;
+    }
+    
+    .project-description {
+        margin: 6px 0 12px 0;
+        font-size: 0.85em;
+    }
+    
+    li {
+        margin-bottom: 20px;
+    }
+    
+    p {
+        margin-bottom: 15px;
+    }
+    
+    nav {
+        margin-top: 25px;
+        font-size: 14px;
+    }
+    
+    /* Improve touch targets for mobile */
+    a {
+        padding: 4px 0;
+        min-height: 24px;
+        display: inline-block;
+    }
+    
+    .modal-close {
+        top: 15px;
+        right: 20px;
+        font-size: 35px;
+        padding: 10px;
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 360px) {
+    body {
+        padding: 15px 12px;
+        font-size: 14px;
+    }
+    
     .profile-image {
-        width: 160px;
-        height: 160px;
+        width: 120px;
+        height: 120px;
+        margin-bottom: 20px;
     }
     
     h2 {
         font-size: 1.2em;
+        margin: 20px 0 10px 0;
     }
     
     .project-thumbnail {
         width: 140px;
         height: 90px;
+    }
+    
+    .project-description {
+        font-size: 0.8em;
+    }
+    
+    nav {
+        font-size: 13px;
+    }
+}
+
+/* Improve modal on mobile */
+@media (max-width: 768px) {
+    .modal-content {
+        max-width: 95%;
+        max-height: 95%;
+    }
+    
+    .modal-close {
+        top: 10px;
+        right: 15px;
+        font-size: 30px;
     }
 }
