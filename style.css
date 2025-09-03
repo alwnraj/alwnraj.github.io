@@ -6,7 +6,7 @@ body {
     margin: 0 auto;
     padding: 40px 20px;
     line-height: 1.6;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .profile-image {
@@ -20,7 +20,7 @@ body {
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.7em;
     font-weight: 600;
     margin: 40px 0 20px 0;
     color: #2c2c2c;
@@ -33,7 +33,7 @@ p {
 .project-description {
     margin: 10px 0 20px 0;
     color: #555;
-    font-size: 0.95em;
+    font-size: 1.0em;
 }
 
 .project-thumbnail {
@@ -130,7 +130,7 @@ nav {
 @media (max-width: 768px) {
     body {
         padding: 25px 20px;
-        font-size: 19px;
+        font-size: 20px;
         line-height: 1.7;
     }
     
@@ -141,7 +141,7 @@ nav {
     }
     
     h2 {
-        font-size: 1.6em;
+        font-size: 1.7em;
         margin: 30px 0 15px 0;
     }
     
@@ -172,7 +172,7 @@ nav {
 @media (max-width: 480px) {
     body {
         padding: 20px 15px;
-        font-size: 15px;
+        font-size: 18px;
         line-height: 1.6;
     }
     
@@ -183,7 +183,7 @@ nav {
     }
     
     h2 {
-        font-size: 1.3em;
+        font-size: 1.5em;
         margin: 25px 0 12px 0;
     }
     
@@ -195,7 +195,7 @@ nav {
     
     .project-description {
         margin: 6px 0 12px 0;
-        font-size: 0.85em;
+        font-size: 0.95em;
     }
     
     li {
@@ -208,7 +208,7 @@ nav {
     
     nav {
         margin-top: 25px;
-        font-size: 14px;
+        font-size: 16px;
     }
     
     /* Improve touch targets for mobile */
@@ -234,7 +234,7 @@ nav {
 @media (max-width: 360px) {
     body {
         padding: 15px 12px;
-        font-size: 14px;
+        font-size: 16px;
     }
     
     .profile-image {
@@ -244,7 +244,7 @@ nav {
     }
     
     h2 {
-        font-size: 1.2em;
+        font-size: 1.4em;
         margin: 20px 0 10px 0;
     }
     
@@ -254,11 +254,11 @@ nav {
     }
     
     .project-description {
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
     
     nav {
-        font-size: 13px;
+        font-size: 15px;
     }
 }
 
