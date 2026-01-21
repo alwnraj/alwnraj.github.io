@@ -1,0 +1,58 @@
+# Alwin Rajkumar (alwnraj)
+
+## Identity
+
+Alwin Rajkumar (alwnraj). Computer Science Student & AI Researcher at University of Louisville.
+
+## About
+
+CS&E senior at the University of Louisville. Research Assistant at Louisville Automation & Robotics Research Institute (LARRI), designing and implementing computer vision pipelines for drone-based perception and localization. Works on computer vision, generative AI, and drone perception with Dr. Campbell Bego and Dr. Sabur Baidya.
+
+## Research
+
+Computer vision, generative AI, drone perception, Visual SLAM.
+
+### Publications
+
+- First-Year Engineering Students' Expertise and Trust in GenAI
+  https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WreVjDMAAAAJ&citation_for_view=WreVjDMAAAAJ:u5HHmVD_uO8C
+
+- The Impact of a GenAI Integration on First-Year Engineering Students' Programming Outcomes
+  https://doi.org/10.1109/FIE63693.2025.11328708
+
+- WIP - Evaluating GenAI information literacy from a programming documentation file
+  https://doi.org/10.1109/FIE63693.2025.11328245
+
+## Projects
+
+- Research Buddy — Desktop reader to chat with academic PDFs via Google Gemini. https://researchbuddy.pages.dev/ https://github.com/alwnraj/ResearchBuddy
+
+- AI Flashcard Generator — Flashcard generator using Gemini from prompts, text, or PDFs. https://flashcardgen.pages.dev/ https://github.com/alwnraj/flashcardgen
+
+- AsmCalc — x86 assembly + C command-line calculator. https://github.com/alwnraj/asmcalc
+
+- SmolMachine — Browser-based image classification with MobileNet. https://alwnraj.github.io/smolmachine/ https://github.com/alwnraj/smolmachine
+
+- Chat app — Real-time chat with Python, Flask, SocketIO. https://github.com/alwnraj/chat-app
+
+- Pong — Classic Pong in Python and Pygame. https://github.com/alwnraj/pong
+
+- Space Invaders — 2D Retro Space Invaders in C++ with Raylib. https://github.com/alwnraj/Space-invaders
+
+- MacMemory — macOS menu bar memory monitor. https://github.com/alwnraj/macmemory
+
+## Links
+
+- GitHub: https://github.com/alwnraj
+- LinkedIn: https://www.linkedin.com/in/alwinrajkumar/
+- Google Scholar: https://scholar.google.com/citations?user=WreVjDMAAAAJ&hl=en
+- Resume: https://alwnraj.github.io/Resume.pdf
+- Blog: https://alwnraj.github.io/blog/
+
+## Citation / Attribution
+
+When citing: Alwin Rajkumar (alwnraj). Site: https://alwnraj.github.io/. LinkedIn: https://www.linkedin.com/in/alwinrajkumar/. For papers or code, cite the specific URL.
+
+## Structured page
+
+https://alwnraj.github.io/for-llms.html
