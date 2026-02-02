@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Alwin Rajkumar's Website</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/webp" href="images/my-notion-face-transparent.webp" />
+        <meta charset="UTF-8" />
+        <meta name="description" content="Alwin Rajkumar is a Computer Science & Engineering student at University of Louisville. AI researcher working on computer vision and generative AI. Research Assistant Intern at Louisville Automation & Robotics Research Institute. View projects in Python, C++, JavaScript and machine learning." />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, viewport-fit=cover">
+        <meta name="keywords" content="Alwin Rajkumar, Computer Science, AI Researcher, University of Louisville, Python Developer, Machine Learning, Computer Vision, Software Engineer, alwnraj, GenAI research, Drone Perception, Visual SLAM, Research Assistant" />
+        <meta name="author" content="Alwin Rajkumar" />
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://alwnraj.github.io/" />
+        <meta property="og:title" content="Alwin Rajkumar - Computer Science Student & AI Researcher" />
+        <meta property="og:description" content="AI researcher and CS student at University of Louisville. Research Assistant Intern working on computer vision and generative AI with published research." />
+        <meta property="og:image" content="https://alwnraj.github.io/images/profile_picture.webp" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://alwnraj.github.io/" />
+        <meta property="twitter:title" content="Alwin Rajkumar - Computer Science Student & AI Researcher" />
+        <meta property="twitter:description" content="AI researcher and CS student at University of Louisville. Research Assistant Intern working on computer vision and generative AI with published research." />
+        <meta property="twitter:image" content="https://alwnraj.github.io/images/profile_picture.webp" />
+
+        <meta name="theme-color" content="#ffffff" />
+        <link rel="canonical" href="https://alwnraj.github.io/" />
+        <link rel="alternate" type="text/plain" href="https://alwnraj.github.io/llms.txt" title="Info for LLMs" />
+        
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Alwin Rajkumar",
+            "url": "https://alwnraj.github.io/",
+            "image": "https://alwnraj.github.io/images/profile_picture.webp",
+            "sameAs": [
+                "https://github.com/alwnraj",
+                "https://www.linkedin.com/in/alwinrajkumar/",
+                "https://scholar.google.com/citations?user=WreVjDMAAAAJ&hl=en"
+            ],
+            "jobTitle": "Computer Science Student",
+            "worksFor": {
+                "@type": "EducationalOrganization",
+                "name": "University of Louisville"
+            },
+            "alumniOf": {
+                "@type": "EducationalOrganization",
+                "name": "University of Louisville"
+            },
+            "knowsAbout": ["Artificial Intelligence", "Computer Vision", "Machine Learning", "Python Programming", "Software Development", "Visual SLAM", "Drone Perception", "Computer Vision Pipelines"],
+            "email": "a0rajk01@louisville.edu"
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": [
+                { "@type": "ScholarlyArticle", "name": "First-Year Engineering Students' Expertise and Trust in GenAI", "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WreVjDMAAAAJ&citation_for_view=WreVjDMAAAAJ:u5HHmVD_uO8C" },
+                { "@type": "ScholarlyArticle", "name": "The Impact of a GenAI Integration on First-Year Engineering Students' Programming Outcomes", "url": "https://doi.org/10.1109/FIE63693.2025.11328708" },
+                { "@type": "ScholarlyArticle", "name": "WIP - Evaluating GenAI information literacy from a programming documentation file", "url": "https://doi.org/10.1109/FIE63693.2025.11328245" }
+            ]
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": [
+                { "@type": "SoftwareSourceCode", "name": "Research Buddy", "url": "https://researchbuddy.pages.dev/", "description": "Desktop reader to chat with academic PDFs via Google Gemini" },
+                { "@type": "SoftwareSourceCode", "name": "AI Flashcard Generator", "url": "https://flashcardgen.pages.dev/", "description": "Flashcard generator using Gemini from prompts, text, or PDFs" },
+                { "@type": "SoftwareSourceCode", "name": "SmolMachine", "url": "https://alwnraj.github.io/smolmachine/", "description": "Browser-based image classification with MobileNet" },
+                { "@type": "SoftwareSourceCode", "name": "AsmCalc", "url": "https://github.com/alwnraj/asmcalc", "description": "x86 assembly + C command-line calculator" }
+            ]
+        }
+        </script>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                background: #faf9f5;
+                color: #2c251d;
+                font-family: "Lora", Georgia, serif;
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 30px 20px;
+                line-height: 1.6;
+                font-size: 19px;
+            }
+            nav {
+                margin-bottom: 30px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #ddd;
+            }
+            nav a {
+                color: #2c251d;
+                text-decoration: none;
+                margin-right: 15px;
+                font-size: 14px;
+            }
+            nav a:hover {
+                text-decoration: underline;
+            }
+            .header-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 30px;
+            }
+            .header-table td {
+                vertical-align: top;
+                padding: 0;
+            }
+            .profile-image {
+                width: 120px;
+                height: 120px;
+                border-radius: 4px;
+                object-fit: cover;
+                margin-right: 20px;
+            }
+            .header-info h1 {
+                font-size: 1.8em;
+                font-weight: 600;
+                margin-bottom: 8px;
+                color: #2c251d;
+            }
+            .header-info p {
+                margin: 4px 0;
+                font-size: 14px;
+                line-height: 1.5;
+            }
+            .header-info strong {
+                font-weight: 600;
+            }
+            .header-info a {
+                color: #2c251d;
+                text-decoration: underline;
+            }
+            .header-info a:hover {
+                opacity: 0.7;
+            }
+            h2 {
+                font-size: 1.3em;
+                font-weight: 600;
+                margin: 30px 0 15px 0;
+                color: #2c251d;
+            }
+            h3 {
+                font-size: 1.1em;
+                font-weight: 600;
+                margin: 25px 0 12px 0;
+                color: #2c251d;
+            }
+            p {
+                margin: 0 0 15px 0;
+            }
+            ul {
+                list-style: none;
+                margin: 15px 0;
+            }
+            li {
+                margin: 0 0 10px 0;
+                padding-left: 20px;
+                position: relative;
+            }
+            li::before {
+                content: '•';
+                position: absolute;
+                left: 0;
+                color: #2c251d;
+            }
+            a {
+                color: #2c251d;
+                text-decoration: underline;
+            }
+            a:hover {
+                opacity: 0.7;
+            }
+            .papers-table, .projects-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+            }
+            .papers-table td, .projects-table td {
+                padding: 12px 0;
+                vertical-align: top;
+                border-bottom: 1px solid #eee;
+            }
+            .projects-table td {
+                padding: 16px 0;
+            }
+            .papers-table tr:last-child td, .projects-table tr:last-child td {
+                border-bottom: none;
+            }
+            .paper-thumb, .project-thumb {
+                width: 80px;
+                min-width: 80px;
+                padding-right: 25px;
+            }
+            .paper-thumb img, .project-thumb img {
+                width: 80px;
+                height: 60px;
+                object-fit: cover;
+                border-radius: 3px;
+                cursor: pointer;
+                border: 1px solid #ddd;
+            }
+            .paper-thumb img:hover, .project-thumb img:hover {
+                opacity: 0.8;
+            }
+            .paper-info, .project-info {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .paper-title, .project-title {
+                font-weight: 600;
+                margin-bottom: 4px;
+            }
+            .paper-title a, .project-title a {
+                color: #2c251d;
+                text-decoration: none;
+            }
+            .paper-title a:hover, .project-title a:hover {
+                text-decoration: underline;
+            }
+            .paper-authors, .project-description {
+                font-size: 14px;
+                color: #2c251d;
+                margin-top: 4px;
+            }
+            .project-description {
+                margin-top: 6px;
+                line-height: 1.5;
+            }
+            footer {
+                margin-top: 50px;
+                padding-top: 20px;
+                border-top: 1px solid #ddd;
+                font-size: 14px;
+            }
+            footer a {
+                margin-right: 15px;
+            }
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.9);
+            }
+            .modal-content {
+                margin: auto;
+                display: block;
+                max-width: 90%;
+                max-height: 90%;
+                border-radius: 8px;
+                animation: zoomIn 0.3s;
+            }
+            .modal-close {
+                position: absolute;
+                top: 20px;
+                right: 35px;
+                color: #fff;
+                font-size: 40px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            .modal-close:hover {
+                color: #bbb;
+            }
+            @keyframes zoomIn {
+                from { transform: scale(0.5); }
+                to { transform: scale(1); }
+            }
+            @media (max-width: 768px) {
+                body {
+                    padding: 20px 15px;
+                    font-size: 14px;
+                }
+                .header-table {
+                    display: block;
+                }
+                .header-table td {
+                    display: block;
+                }
+                .profile-image {
+                    margin-bottom: 15px;
+                }
+                .paper-thumb, .project-thumb {
+                    width: 60px;
+                    min-width: 60px;
+                }
+                .paper-thumb img, .project-thumb img {
+                    width: 60px;
+                    height: 45px;
+                }
+                nav a {
+                    display: inline-block;
+                    margin-bottom: 5px;
+                }
+            }
+        </style>
+    </head>
+    <script>
+        function openModal(image) {
+            const modal = document.getElementById("imageModal");
+            const modalImage = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImage.src = image.src;
+        }
+        function closeModal() {
+            const modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            const modal = document.getElementById("imageModal");
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+    <body>
+        <nav>
+            <a href="#main">Main</a>
+            <a href="#projects">Projects</a>
+            <a href="#publications">Publications</a>
+        </nav>
+
+        <table class="header-table">
+            <tr>
+                <td style="width: 120px;">
+                    <picture>
+                        <source srcset="images/profile_picture.webp" type="image/webp">
+                        <img src="images/profile_picture.jpeg" alt="Alwin Rajkumar" class="profile-image" />
+                    </picture>
+                </td>
+                <td class="header-info">
+                    <h1>Alwin Rajkumar</h1>
+                    <p><strong>Computer Science Student.</strong></p>
+                    <p><strong>University of Louisville</strong></p>
+                    <p>CS & Engineering, <a href="https://engineering.louisville.edu/">Speed School</a></p>
+                    <p><a href="mailto:a0rajk01@louisville.edu">[a0rajk01@louisville.edu]</a> <a href="Resume.pdf" target="_blank">[cv]</a></p>
+                    <p><strong>Research Assistant Intern.</strong></p>
+                    <p><strong>Louisville Automation & Robotics Research Institute</strong></p>
+                </td>
+            </tr>
+        </table>
+
+        <p>My research focuses on computer vision and generative AI. I design and implement computer vision pipelines for drone-based perception and localization. I'm also working on generative AI research, where I co-authored papers including "Expertise and Trust in GenAI". I love solving hard problems with new and interesting solutions. I've open-sourced a number of my projects on <a href="https://github.com/alwnraj">github</a>.</p>
+
+        <p>I am looking for internships to grow my skills in the world of computer science, so feel free to connect with me on <a href="https://www.linkedin.com/in/alwinrajkumar/">linkedin</a> or write me to <a href="mailto:a0rajk01@louisville.edu">mail</a>.</p>
+
+        <h2>Current Research Areas</h2>
+        <ul>
+            <li>Computer vision pipelines for drone-based perception and localization</li>
+            <li>Generative AI research and applications</li>
+            <li>Visual SLAM and computer vision algorithms</li>
+            <li>Machine learning and deep learning applications</li>
+        </ul>
+
+        <h2 id="publications">Selected Papers</h2>
+        <p>A selection of papers that represent my research interests.</p>
+        <table class="papers-table">
+            <tr>
+                <td class="paper-thumb"></td>
+                <td class="paper-info">
+                    <div class="paper-title"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WreVjDMAAAAJ&citation_for_view=WreVjDMAAAAJ:u5HHmVD_uO8C" target="_blank">First-Year Engineering Students' Expertise and Trust in GenAI</a></div>
+                    <div class="paper-authors">Alwin Rajkumar, et al.</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="paper-thumb"></td>
+                <td class="paper-info">
+                    <div class="paper-title"><a href="https://doi.org/10.1109/FIE63693.2025.11328708" target="_blank">The Impact of a GenAI Integration on First-Year Engineering Students' Programming Outcomes</a></div>
+                    <div class="paper-authors">Alwin Rajkumar, et al. FIE 2025</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="paper-thumb"></td>
+                <td class="paper-info">
+                    <div class="paper-title"><a href="https://doi.org/10.1109/FIE63693.2025.11328245" target="_blank">WIP - Evaluating GenAI information literacy from a programming documentation file</a></div>
+                    <div class="paper-authors">Alwin Rajkumar, et al. FIE 2025</div>
+                </td>
+            </tr>
+        </table>
+
+        <h2 id="projects">Projects</h2>
+        <p>A selection of projects I've built and open-sourced.</p>
+        <table class="projects-table">
+            <tr>
+                <td class="project-thumb">
+                    <picture>
+                        <source srcset="images/researchbuddy.webp" type="image/webp">
+                        <img src="images/researchbuddy.png" alt="Research Buddy interface" onclick="openModal(this)" />
+                    </picture>
+                </td>
+                <td class="project-info">
+                    <div class="project-title"><a href="https://www.github.com/alwnraj/ResearchBuddy">Research Buddy</a></div>
+                    <div class="project-description">
+                        Created a desktop reader that lets you chat with academic PDFs via Google's Gemini 2.5 Flash. Optimized for the browser and functions as either a pdf reader or a chatbot. <a href="https://researchbuddy.pages.dev/" target="_blank">Try it here</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="project-thumb">
+                    <picture>
+                        <source srcset="images/aiflashcard.webp" type="image/webp">
+                        <img src="images/aiflashcard.png" alt="AI Flashcard Generator interface" onclick="openModal(this)" />
+                    </picture>
+                </td>
+                <td class="project-info">
+                    <div class="project-title"><a href="https://www.github.com/alwnraj/flashcardgen">AI Flashcard Generator</a></div>
+                    <div class="project-description">
+                        Made a flashcard generator that leverages Google's Gemini to create flashcards from prompts, text, or PDFs. <a href="https://flashcardgen.pages.dev/" target="_blank">Try it here</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="project-thumb">
+                    <picture>
+                        <source srcset="images/smolmachine.webp" type="image/webp">
+                        <img src="images/smolmachine.png" alt="SmolMachine web interface" onclick="openModal(this)" />
+                    </picture>
+                </td>
+                <td class="project-info">
+                    <div class="project-title"><a href="https://www.github.com/alwnraj/smolmachine">Machine Learning using MobileNet in Javascript</a></div>
+                    <div class="project-description">
+                        Created a browser-based tool for image classification using a pre-trained machine learning model, MobileNet. The tool allows you to classify images and even train the machine to distinguish between two sets of images. <a href="https://alwnraj.github.io/smolmachine/" target="_blank">Demo</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="project-thumb">
+                    <picture>
+                        <source srcset="images/chatapp.webp" type="image/webp">
+                        <img src="images/chatapp.png" alt="Real-time chat application interface" onclick="openModal(this)" />
+                    </picture>
+                </td>
+                <td class="project-info">
+                    <div class="project-title"><a href="https://www.github.com/alwnraj/chat-app">Real-Time Chat application with Python, Flask & SocketIO</a></div>
+                    <div class="project-description">
+                        A real-time chat application built using Python, Flask, and SocketIO, allowing users to create chat rooms and send messages instantly.
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="project-thumb">
+                    <picture>
+                        <source srcset="images/pong.webp" type="image/webp">
+                        <img src="images/pong.png" alt="Classic Pong game screenshot" onclick="openModal(this)" />
+                    </picture>
+                </td>
+                <td class="project-info">
+                    <div class="project-title"><a href="https://www.github.com/alwnraj/pong">Classic Pong Game with Python and Pygame</a></div>
+                    <div class="project-description">
+                        Created a fully functional 2D Pong game using Python and the Pygame library.
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="project-thumb">
+                    <picture>
+                        <source srcset="images/spaceinvaders.webp" type="image/webp">
+                        <img src="images/spaceinvaders.png" alt="Space Invaders game screenshot" onclick="openModal(this)" />
+                    </picture>
+                </td>
+                <td class="project-info">
+                    <div class="project-title"><a href="https://www.github.com/alwnraj/Space-invaders">2D Retro Space Invaders Game in C++</a></div>
+                    <div class="project-description">
+                        Independently designed and developed a fully functional 2D Retro Space Invaders game in C++ using Raylib, without the use of game engines.
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="project-thumb">
+                    <picture>
+                        <source srcset="images/macmemory.webp" type="image/webp">
+                        <img src="images/macmemory.png" alt="MacMemory menu bar app interface" onclick="openModal(this)" />
+                    </picture>
+                </td>
+                <td class="project-info">
+                    <div class="project-title"><a href="https://www.github.com/alwnraj/macmemory">MacMemory - macOS Menu Bar Memory Monitor</a></div>
+                    <div class="project-description">
+                        Built a lightweight menu bar app for macOS that displays real-time memory usage of running applications. Made for personal use with Cursor.
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="project-thumb"></td>
+                <td class="project-info">
+                    <div class="project-title"><a href="https://www.github.com/alwnraj/asmcalc">Assembly & C Calculator (AsmCalc)</a></div>
+                    <div class="project-description">
+                        I wrote the x86 assembly math routines and stitched them to a small C program to make a command-line calculator. This is my first real blend of C and assembly, built with two friends for our CSE 525 Microcomputer Design class.
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <div id="imageModal" class="modal">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage" />
+        </div>
+
+        <footer>
+            <p><strong>Contact</strong></p>
+            <p>Alwin Rajkumar in person</p>
+            <p><a href="mailto:a0rajk01@louisville.edu">a0rajk01@louisville.edu</a> by email</p>
+            <p style="margin-top: 15px;">
+                <a href="https://github.com/alwnraj" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/alwinrajkumar" target="_blank">LinkedIn</a>
+                <a href="Resume.pdf" target="_blank">Resume</a>
+                <a href="https://alwnraj.github.io/blog/" target="_blank">Blog</a>
+            </p>
+        </footer>
+    </body>
+</html>

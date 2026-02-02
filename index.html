@@ -1,35 +1,34 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Alwin Rajkumar's Website</title>
+        <title>Alwin Rajkumar - AI Researcher & CS Student</title>
+        <!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="style.css" />
         <link rel="icon" type="image/webp" href="images/my-notion-face-transparent.webp" />
         <meta charset="UTF-8" />
-        <meta name="description" content="Alwin Rajkumar is a Computer Science & Engineering student at University of Louisville. AI researcher working on computer vision and generative AI. Research Assistant Intern at Louisville Automation & Robotics Research Institute. View projects in Python, C++, JavaScript and machine learning." />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, viewport-fit=cover">
-        <meta name="keywords" content="Alwin Rajkumar, Computer Science, AI Researcher, University of Louisville, Python Developer, Machine Learning, Computer Vision, Software Engineer, alwnraj, GenAI research, Drone Perception, Visual SLAM, Research Assistant" />
+        <meta name="description" content="Alwin Rajkumar is a Computer Science & Engineering student at University of Louisville. AI researcher working on computer vision and generative AI. View projects in Python, C++, JavaScript and machine learning." />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Alwin Rajkumar, Computer Science, AI Researcher, University of Louisville, Python Developer, Machine Learning, Computer Vision, Software Engineer, alwnraj, GenAI research" />
         <meta name="author" content="Alwin Rajkumar" />
         
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://alwnraj.github.io/" />
         <meta property="og:title" content="Alwin Rajkumar - Computer Science Student & AI Researcher" />
-        <meta property="og:description" content="AI researcher and CS student at University of Louisville. Research Assistant Intern working on computer vision and generative AI with published research." />
+        <meta property="og:description" content="AI researcher and CS student at University of Louisville. Working on computer vision and generative AI with published research." />
         <meta property="og:image" content="https://alwnraj.github.io/images/profile_picture.webp" />
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://alwnraj.github.io/" />
         <meta property="twitter:title" content="Alwin Rajkumar - Computer Science Student & AI Researcher" />
-        <meta property="twitter:description" content="AI researcher and CS student at University of Louisville. Research Assistant Intern working on computer vision and generative AI with published research." />
+        <meta property="twitter:description" content="AI researcher and CS student at University of Louisville. Working on computer vision and generative AI with published research." />
         <meta property="twitter:image" content="https://alwnraj.github.io/images/profile_picture.webp" />
 
         <meta name="theme-color" content="#ffffff" />
         <link rel="canonical" href="https://alwnraj.github.io/" />
-        <link rel="alternate" type="text/plain" href="https://alwnraj.github.io/llms.txt" title="Info for LLMs" />
         
         <!-- Structured Data -->
         <script type="application/ld+json">
@@ -53,187 +52,929 @@
                 "@type": "EducationalOrganization",
                 "name": "University of Louisville"
             },
-            "knowsAbout": ["Artificial Intelligence", "Computer Vision", "Machine Learning", "Python Programming", "Software Development", "Visual SLAM", "Drone Perception", "Computer Vision Pipelines"],
-            "email": "a0rajk01@louisville.edu"
+            "knowsAbout": ["Artificial Intelligence", "Computer Vision", "Machine Learning", "Python Programming", "Software Development"],
+            "email": "alwin.rajkumar@louisville.edu"
         }
         </script>
-        <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "ItemList",
-            "itemListElement": [
-                { "@type": "ScholarlyArticle", "name": "First-Year Engineering Students' Expertise and Trust in GenAI", "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WreVjDMAAAAJ&citation_for_view=WreVjDMAAAAJ:u5HHmVD_uO8C" },
-                { "@type": "ScholarlyArticle", "name": "The Impact of a GenAI Integration on First-Year Engineering Students' Programming Outcomes", "url": "https://doi.org/10.1109/FIE63693.2025.11328708" },
-                { "@type": "ScholarlyArticle", "name": "WIP - Evaluating GenAI information literacy from a programming documentation file", "url": "https://doi.org/10.1109/FIE63693.2025.11328245" }
-            ]
-        }
-        </script>
-        <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "ItemList",
-            "itemListElement": [
-                { "@type": "SoftwareSourceCode", "name": "Research Buddy", "url": "https://researchbuddy.pages.dev/", "description": "Desktop reader to chat with academic PDFs via Google Gemini" },
-                { "@type": "SoftwareSourceCode", "name": "AI Flashcard Generator", "url": "https://flashcardgen.pages.dev/", "description": "Flashcard generator using Gemini from prompts, text, or PDFs" },
-                { "@type": "SoftwareSourceCode", "name": "SmolMachine", "url": "https://alwnraj.github.io/smolmachine/", "description": "Browser-based image classification with MobileNet" },
-                { "@type": "SoftwareSourceCode", "name": "AsmCalc", "url": "https://github.com/alwnraj/asmcalc", "description": "x86 assembly + C command-line calculator" }
-            ]
-        }
-        </script>
-    </head>
-    <script>
-        function openModal(image) {
-            const modal = document.getElementById("imageModal");
-            const modalImage = document.getElementById("modalImage");
-            modal.style.display = "block";
-            modalImage.src = image.src;
-        }
-    
-        function closeModal() {
-            const modal = document.getElementById("imageModal");
-            modal.style.display = "none";
-        }
-        
-        // Close modal when clicking the background, but not when clicking the image
-        window.onclick = function(event) {
-            const modal = document.getElementById("imageModal");
-            if (event.target === modal) {
-                closeModal();
+
+        <style>
+            /* Reset and base styles */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
             }
-        }
-    </script>
+
+            body {
+                font-family: "Lora", Georgia, serif;
+                line-height: 1.4;
+                color: #e2e8f0;
+                background: #1a1a1a;
+                font-size: 17px;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            body[data-theme="light"] {
+                color: #3b2f1f;
+                background: #f7f1e3;
+            }
+
+            /* Container */
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px 30px 20px 30px;
+                position: relative;
+                font-size: 18.5px;
+                color: rgba(226, 232, 240, 1);
+                letter-spacing: 0.2px;
+            }
+
+            /* Header */
+            .header {
+                margin-bottom: 20px;
+            }
+
+            .header-content {
+                display: flex;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .profile-section {
+                display: flex;
+                gap: 20px;
+                align-items: flex-start;
+                width: 100%;
+            }
+
+            .profile-image {
+                width: 220px;
+                height: 240px;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(1, 1fr);
+                column-gap: 0;
+                border-radius: 8px;
+                overflow: hidden;
+                object-fit: cover;
+                border: 1px solid #404040;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+                vertical-align: bottom;
+            }
+
+            body[data-theme="light"] .profile-image {
+                border-color: #d5c7a3;
+                box-shadow: 0 1px 3px rgba(59, 47, 31, 0.18);
+            }
+
+            .profile-info {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                height: 240px;
+            }
+
+            .name {
+                font-size: 2em;
+                font-weight: 600;
+                color: #f8fafc;
+                margin: 0;
+                letter-spacing: -0.025em;
+            }
+
+            body[data-theme="light"] .name {
+                color: #2f2417;
+            }
+
+            .title {
+                font-size: 1.2em;
+                color: #d1d5db;
+                margin: 0;
+                font-weight: 500;
+            }
+
+            body[data-theme="light"] .title {
+                color: #5a4b33;
+            }
+
+            .subtitle {
+                font-size: 1.1em;
+                color: #9ca3af;
+                margin: 0;
+                font-weight: 400;
+            }
+
+            body[data-theme="light"] .subtitle {
+                color: #7a6848;
+            }
+
+            .contact-links {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .contact-link {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                color: #d1d5db;
+                text-decoration: none;
+                font-size: 15px;
+                padding: 0;
+                transition: color 0.2s ease;
+            }
+
+            body[data-theme="light"] .contact-link {
+                color: #5a4b33;
+            }
+
+            .contact-link:hover {
+                color: #60a5fa;
+            }
+
+            body[data-theme="light"] .contact-link:hover {
+                color: #6b4f2a;
+            }
+
+            .contact-link svg {
+                color: #9ca3af;
+                transition: color 0.2s ease;
+            }
+
+            body[data-theme="light"] .contact-link svg {
+                color: #7a6848;
+            }
+
+            .contact-link:hover svg {
+                color: #60a5fa;
+            }
+
+            body[data-theme="light"] .contact-link:hover svg {
+                color: #6b4f2a;
+            }
+
+            .theme-toggle {
+                position: fixed;
+                top: 16px;
+                right: 16px;
+                background: #2a2a2a;
+                color: #f8fafc;
+                border: 1px solid #404040;
+                border-radius: 999px;
+                padding: 6px;
+                width: 32px;
+                height: 32px;
+                cursor: pointer;
+                transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 1100;
+            }
+
+            .theme-toggle:hover {
+                background: #3a3a3a;
+            }
+
+            body[data-theme="light"] .theme-toggle {
+                background: #efe3c8;
+                color: #3b2f1f;
+                border-color: #d5c7a3;
+            }
+
+            body[data-theme="light"] .theme-toggle:hover {
+                background: #e4d5b4;
+            }
+
+            .theme-toggle svg {
+                width: 16px;
+                height: 16px;
+                display: block;
+            }
+
+            .theme-toggle .icon-sun,
+            .theme-toggle .icon-moon {
+                display: none;
+            }
+
+            body[data-theme="light"] .theme-toggle .icon-moon {
+                display: block;
+            }
+
+            body:not([data-theme="light"]) .theme-toggle .icon-sun {
+                display: block;
+            }
+            /* Main content */
+            .main-content {
+                margin-bottom: 20px;
+            }
+
+            .content-section {
+                margin-bottom: 20px;
+            }
+
+            .content-section h2 {
+                font-size: 1.3em;
+                font-weight: 600;
+                color: #f8fafc;
+                margin: 0 0 8px 0;
+                padding-bottom: 4px;
+                border-bottom: 1px solid #404040;
+            }
+
+            body[data-theme="light"] .content-section h2 {
+                color: #2f2417;
+                border-bottom-color: #d5c7a3;
+            }
+
+            .content-section p {
+                margin: 0 0 6px 0;
+                color: #d1d5db;
+                line-height: 1.6;
+                font-weight: 500;
+            }
+
+            body[data-theme="light"] .content-section p {
+                color: #4a3a27;
+            }
+
+            /* Publications */
+            .publication-item {
+                margin-bottom: 12px;
+            }
+
+            .publication-link {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                color: #f8fafc;
+                text-decoration: none;
+                padding: 0;
+                transition: color 0.2s ease;
+                line-height: 1.4;
+            }
+
+            body[data-theme="light"] .publication-link {
+                color: #3b2f1f;
+            }
+
+            .publication-link:hover {
+                color: #60a5fa;
+            }
+
+            body[data-theme="light"] .publication-link:hover {
+                color: #6b4f2a;
+            }
+
+            .publication-title {
+                font-weight: 500;
+            }
+
+            .external-link-icon {
+                color: #9ca3af;
+                flex-shrink: 0;
+            }
+
+            body[data-theme="light"] .external-link-icon {
+                color: #7a6848;
+            }
+
+            .publication-link:hover .external-link-icon {
+                color: #60a5fa;
+            }
+
+            body[data-theme="light"] .publication-link:hover .external-link-icon {
+                color: #6b4f2a;
+            }
+
+            /* Projects */
+            .project-grid {
+                display: grid;
+                gap: 0;
+            }
+
+            .project-card {
+                border: none;
+                background: none;
+                padding: 20px 0;
+                box-shadow: none;
+                position: relative;
+                border-bottom: 1px solid #2a2a2a;
+                display: flex;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            body[data-theme="light"] .project-card {
+                border-bottom-color: #e2d4b5;
+            }
+
+            .project-card:last-child {
+                border-bottom: none;
+            }
+
+            .project-card::before {
+                display: none;
+            }
+
+            .project-card:hover {
+                transform: none;
+                box-shadow: none;
+                border-color: transparent;
+                background: none;
+            }
+
+            .project-header {
+                margin-bottom: 8px;
+            }
+
+            .project-details {
+                flex: 1;
+                min-width: 0;
+            }
+
+            .project-card picture {
+                order: 0;
+            }
+
+            .project-details {
+                order: 1;
+            }
+
+            .project-title {
+                font-size: 1.2em;
+                font-weight: 600;
+                margin-bottom: 6px;
+            }
+
+            .project-title a {
+                color: #f8fafc;
+                text-decoration: none;
+                transition: color 0.2s ease;
+            }
+
+            body[data-theme="light"] .project-title a {
+                color: #3b2f1f;
+            }
+
+            .project-title a:hover {
+                color: #60a5fa;
+            }
+
+            body[data-theme="light"] .project-title a:hover {
+                color: #6b4f2a;
+            }
+
+            .project-tech {
+                font-size: 15px;
+                color: #9ca3af;
+                font-weight: 500;
+                padding: 0;
+                background: none;
+                border-radius: 0;
+                display: inline;
+                border: none;
+            }
+
+            .project-description {
+                color: #d1d5db;
+                margin-bottom: 16px;
+                line-height: 1.4;
+                font-size: 16px;
+            }
+
+            body[data-theme="light"] .project-description {
+                color: #4a3a27;
+            }
+
+            .project-thumbnail {
+                width: 150px;
+                height: auto;
+                border-radius: 4px;
+                border: 1px solid #404040;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                margin: 0;
+            }
+
+            body[data-theme="light"] .project-thumbnail {
+                border-color: #d5c7a3;
+                box-shadow: 0 1px 3px rgba(59, 47, 31, 0.18);
+            }
+
+            .project-thumbnail:hover {
+                transform: scale(1.02);
+                box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+                border-color: #60a5fa;
+            }
+
+            body[data-theme="light"] .project-thumbnail:hover {
+                border-color: #6b4f2a;
+                box-shadow: 0 4px 12px rgba(107, 79, 42, 0.25);
+            }
+
+            /* Links */
+            a {
+                color: #60a5fa;
+                text-decoration: none;
+                transition: color 0.2s ease;
+                font-weight: 500;
+            }
+
+            body[data-theme="light"] a {
+                color: #6b4f2a;
+            }
+
+            a:hover {
+                color: #93c5fd;
+                text-decoration: underline;
+            }
+
+            body[data-theme="light"] a:hover {
+                color: #4d3a1f;
+            }
+
+            .demo-link {
+                font-weight: 600;
+                color: #a78bfa;
+            }
+
+            body[data-theme="light"] .demo-link {
+                color: #7a5a2b;
+            }
+
+            .demo-link:hover {
+                color: #c4b5fd;
+            }
+
+            body[data-theme="light"] .demo-link:hover {
+                color: #5b421f;
+            }
+
+            /* Footer */
+            .footer {
+                border-top: 1px solid #404040;
+                padding-top: 12px;
+                margin-top: 12px;
+                text-align: center;
+            }
+
+            body[data-theme="light"] .footer {
+                border-top-color: #d5c7a3;
+            }
+
+            .footer-nav {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 24px;
+                flex-wrap: wrap;
+                font-size: 26px;
+            }
+
+            .nav-link {
+                color: #9ca3af;
+                text-decoration: none;
+                font-size: 15px;
+                font-weight: 500;
+                transition: color 0.2s ease;
+                padding: 0;
+                border-radius: 0;
+                background: none;
+                border: none;
+                backdrop-filter: none;
+            }
+
+            body[data-theme="light"] .nav-link {
+                color: #4a3a27;
+            }
+
+            .nav-link:hover {
+                color: #60a5fa;
+                background: none;
+                border-color: transparent;
+                transform: none;
+            }
+
+            body[data-theme="light"] .nav-link:hover {
+                color: #6b4f2a;
+            }
+
+            .nav-separator {
+                color: #6b7280;
+                font-weight: 300;
+            }
+
+            body[data-theme="light"] .nav-separator {
+                color: #b9a57f;
+            }
+
+            /* Modal */
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.9);
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+                backdrop-filter: blur(8px);
+            }
+
+            body[data-theme="light"] .modal {
+                background-color: rgba(59, 47, 31, 0.85);
+            }
+
+            .modal-content {
+                position: relative;
+                max-width: 90%;
+                max-height: 90%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .modal-image {
+                max-width: 100%;
+                max-height: 100%;
+                width: auto;
+                height: auto;
+                object-fit: contain;
+                border-radius: 8px;
+                box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+                border: 2px solid rgba(59, 130, 246, 0.3);
+            }
+
+            body[data-theme="light"] .modal-image {
+                border-color: rgba(107, 79, 42, 0.4);
+                box-shadow: 0 25px 50px rgba(59, 47, 31, 0.45);
+            }
+
+            .modal-close {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                color: #ffffff;
+                font-size: 32px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: color 0.2s ease;
+                z-index: 1001;
+            }
+
+            .modal-close:hover {
+                color: #fbbf24;
+                background: rgba(59, 130, 246, 0.3);
+                transform: scale(1.1);
+            }
+
+            /* Responsive design */
+            @media (max-width: 600px) {
+                .container {
+                    padding: 20px 20px 30px 20px;
+                }
+
+                .theme-toggle {
+                    top: 14px;
+                    right: 14px;
+                }
+                
+                .profile-section {
+                    flex-direction: row;
+                    gap: 15px;
+                    text-align: left;
+                }
+                
+                .profile-image {
+                    width: 140px;
+                    height: 160px;
+                }
+
+                .profile-info {
+                    height: auto;
+                    min-height: 160px;
+                }
+                
+                .name {
+                    font-size: 1.7em;
+                }
+                
+                .contact-links {
+                    align-items: flex-start;
+                }
+                
+                .project-thumbnail {
+                    margin: 0 auto;
+                }
+
+                .project-card {
+                    flex-direction: row;
+                }
+            }
+
+        </style>
+    </head>
     <body>
-        <picture>
-            <source srcset="images/profile_picture.webp" type="image/webp">
-            <img src="images/profile_picture.jpeg" alt="Alwin Rajkumar" class="profile-image" />
-        </picture>
-
-        <h2>Hi!</h2>
-        <p>My name is Alwin Rajkumar and I'm a senior at the University of Louisville studying Computer Science & Engineering. 
-        I love solving hard problems with new and interesting solutions. I've open-sourced a number of my projects 
-        on <a href="https://github.com/alwnraj">github</a>.
-        I am looking for internships to grow my skills in the world of computer science, so feel free 
-        to connect with me on <a href="https://www.linkedin.com/in/alwinrajkumar/">linkedin</a> or write me to 
-        <a href="mailto:a0rajk01@louisville.edu">mail</a>.</p>
-
-        <p>See more on my <a href="Resume.pdf" target="_blank">resume</a></p>
-
-        <h2>What am I doing now?</h2>
-        <p>At the moment, I'm working as a Research Assistant Intern at the Louisville Automation & Robotics Research Institute, 
-        where I design and implement computer vision pipelines for drone-based perception and localization. 
-        I'm also working with <a href="https://engineering.louisville.edu/faculty/campbell-bego/">Dr.Bego</a> on generative AI research, 
-        where I co-authored papers including "Expertise and Trust in GenAI". 
-        I am also working with <a href="https://engineering.louisville.edu/faculty/sabur-h-baidya/">Dr.Baidya</a> on Computer Vision algorithms, 
-        mainly for the use on drones.</p>
-
-        <h2>Research & Publications</h2>
-        <ul>
-            <li><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WreVjDMAAAAJ&citation_for_view=WreVjDMAAAAJ:u5HHmVD_uO8C" target="_blank">First-Year Engineering Students' Expertise and Trust in GenAI</a></li>
-            <li><a href="https://doi.org/10.1109/FIE63693.2025.11328708" target="_blank">The Impact of a GenAI Integration on First-Year Engineering Students' Programming Outcomes</a></li>
-            <li><a href="https://doi.org/10.1109/FIE63693.2025.11328245" target="_blank">WIP - Evaluating GenAI information literacy from a programming documentation file</a></li>
-        </ul>
-
-        <h2>Personal Projects</h2>
-
-        <ul>
-            <!-- Featured Projects -->
-            <li>
-            <a href="https://www.github.com/alwnraj/asmcalc">Assembly & C Calculator (AsmCalc)</a>
-            <p class="project-description">
-                I wrote the x86 assembly math routines and stitched them to a small C program to make a command-line calculator. 
-                This is my first real blend of C and assembly, built with two friends for our CSE 525 Microcomputer Design class.
-            </p>
-           </li>
-            
-            <li>
-                <a href="https://www.github.com/alwnraj/ResearchBuddy">Research Buddy</a>
-                <p class="project-description">
-                    Created a desktop reader that lets you chat with academic PDFs via Google's Gemini 2.5 Flash. Optimized for the browser and functions as either a pdf reader or a chatbot.
-                    <a href="https://researchbuddy.pages.dev/" target="_blank">Try it here</a>
-                </p>
-                <picture>
-                    <source srcset="images/researchbuddy.webp" type="image/webp">
-                    <img src="images/researchbuddy.png" alt="Research Buddy interface" class="project-thumbnail" onclick="openModal(this)" />
+        <div class="container">
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <line x1="12" y1="2" x2="12" y2="5"></line>
+                    <line x1="12" y1="19" x2="12" y2="22"></line>
+                    <line x1="2" y1="12" x2="5" y2="12"></line>
+                    <line x1="19" y1="12" x2="22" y2="12"></line>
+                    <line x1="4.2" y1="4.2" x2="6.3" y2="6.3"></line>
+                    <line x1="17.7" y1="17.7" x2="19.8" y2="19.8"></line>
+                    <line x1="17.7" y1="6.3" x2="19.8" y2="4.2"></line>
+                    <line x1="4.2" y1="19.8" x2="6.3" y2="17.7"></line>
+                </svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>
+                </svg>
+            </button>
+            <!-- Header Section -->
+            <header class="header">
+                <div class="header-content">
+                    <div class="profile-section">
+                        <picture>
+                    <source srcset="images/profile_picture.webp" type="image/webp">
+                    <img src="images/profile_picture.jpeg" alt="Alwin Rajkumar" class="profile-image" />
                 </picture>
-            </li>
-            <!-- End Featured Projects -->
-            <li>
-            <a href="https://www.github.com/alwnraj/chat-app">Real-Time Chat application with Python, Flask & SocketIO</a>
-            <p class="project-description">
-                A real-time chat application built using Python, Flask, and SocketIO, allowing users to create chat rooms and send messages instantly.
-            </p>
-            <picture>
-                <source srcset="images/chatapp.webp" type="image/webp">
-                <img src="images/chatapp.png" alt="Real-time chat application interface" class="project-thumbnail" onclick="openModal(this)" />
-            </picture>
-        </li>
+                        <div class="profile-info">
+                            <h1 class="name">Alwin Rajkumar</h1>
+                            <p class="title">Computer Science & Engineering Student</p>
+                            <p class="subtitle">University of Louisville</p>
+                            <div class="contact-links">
+                                <a href="mailto:a0rajk01@louisville.edu" class="contact-link">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
+                                    a0rajk01@louisville.edu
+                                </a>
+                                <a href="https://github.com/alwnraj" target="_blank" class="contact-link">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-1.94-2.63c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    </svg>
+                                    GitHub
+                                </a>
+                                <a href="https://www.linkedin.com/in/alwinrajkumar/" target="_blank" class="contact-link">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                        <rect x="2" y="9" width="4" height="12"/>
+                                        <circle cx="4" cy="4" r="2"/>
+                                    </svg>
+                                    LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
 
-        <li>
-            <a href="https://www.github.com/alwnraj/pong">Classic Pong Game with Python and Pygame</a>
-            <p class="project-description">Created a fully functional 2D Pong game using Python and the Pygame library</p>
-            <picture>
-                <source srcset="images/pong.webp" type="image/webp">
-                <img src="images/pong.png" alt="Classic Pong game screenshot" class="project-thumbnail" onclick="openModal(this)" />
-            </picture>
-        </li>
+            <!-- Main Content -->
+            <main class="main-content">
+                <section class="content-section">
+                    <h2>About</h2>
+                    <p>My name is Alwin Rajkumar and I'm a senior at the University of Louisville studying Computer Science & Engineering. I love solving hard problems with new and interesting solutions. I've open-sourced a number of my projects on <a href="https://github.com/alwnraj">github</a>. I am looking for internships to grow my skills in the world of computer science, so feel free to connect with me on <a href="https://www.linkedin.com/in/alwinrajkumar/">linkedin</a> or write me to <a href="mailto:a0rajk01@louisville.edu">mail</a>.</p>
+                    <p>See more on my <a href="Resume.pdf" target="_blank">resume</a></p>
+                </section>
 
-        <li>
-            <a href="https://www.github.com/alwnraj/Space-invaders">2D Retro Space Invaders Game in C++</a>
-            <p class="project-description">Independently designed and developed a fully functional 2D Retro Space Invaders game in C++ using Raylib, without the use of game engines.</p>
-            <picture>
-                <source srcset="images/spaceinvaders.webp" type="image/webp">
-                <img src="images/spaceinvaders.png" alt="Space Invaders game screenshot" class="project-thumbnail" onclick="openModal(this)" />
-            </picture>
-        </li>
+                <section class="content-section">
+                    <h2>What am I doing now?</h2>
+                    <p>At the moment, I'm working as a Research Assistant Intern at the Louisville Automation & Robotics Research Institute, where I design and implement computer vision pipelines for drone-based perception and localization. I'm also working with <a href="https://engineering.louisville.edu/faculty/campbell-bego/">Dr.Bego</a> on generative AI research, where I co-authored papers including "Expertise and Trust in GenAI". I am also working with <a href="https://engineering.louisville.edu/faculty/sabur-h-baidya/">Dr.Baidya</a> on Computer Vision algorithms, mainly for the use on drones.</p>
+                </section>
 
-        <li>
-            <a href="https://www.github.com/alwnraj/smolmachine">Machine Learning using MobileNet in Javascript</a>
-            <p class="project-description">Created a browser-based tool for image classification using a pre-trained machine learning model, 
-                MobileNet. The tool allows you to classify images and even train the machine to distinguish between two sets of images. <a href="https://alwnraj.github.io/smolmachine/" target="_blank">Demo</a></p>
-            <picture>
-                <source srcset="images/smolmachine.webp" type="image/webp">
-                <img src="images/smolmachine.png" alt="SmolMachine web interface" class="project-thumbnail" onclick="openModal(this)" />
-            </picture>
-        </li>
+                <section class="content-section">
+                    <h2>Research & Publications</h2>
+                    <div class="publication-item">
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WreVjDMAAAAJ&citation_for_view=WreVjDMAAAAJ:u5HHmVD_uO8C" target="_blank" class="publication-link">
+                            <span class="publication-title">First-Year Engineering Students' Expertise and Trust in GenAI</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="external-link-icon">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                <polyline points="15,3 21,3 21,9"/>
+                                <line x1="10" y1="14" x2="21" y2="3"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="publication-item">
+                        <a href="https://doi.org/10.1109/FIE63693.2025.11328708" target="_blank" class="publication-link">
+                            <span class="publication-title">The Impact of a GenAI Integration on First-Year Engineering Students' Programming Outcomes</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="external-link-icon">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                <polyline points="15,3 21,3 21,9"/>
+                                <line x1="10" y1="14" x2="21" y2="3"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="publication-item">
+                        <a href="https://doi.org/10.1109/FIE63693.2025.11328245" target="_blank" class="publication-link">
+                            <span class="publication-title">WIP - Evaluating GenAI information literacy from a programming documentation file</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="external-link-icon">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                <polyline points="15,3 21,3 21,9"/>
+                                <line x1="10" y1="14" x2="21" y2="3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </section>
 
-        <!-- New Projects -->
-        <li>
-            <a href="https://www.github.com/alwnraj/flashcardgen">AI Flashcard Generator</a>
-            <p class="project-description">
-                Made a flashcard generator that leverages Google's Gemini to create flashcards from prompts, text, or PDFs.
-                <a href="https://flashcardgen.pages.dev/" target="_blank">Try it here</a>
-            </p>
-            <picture>
-                <source srcset="images/aiflashcard.webp" type="image/webp">
-                <img src="images/aiflashcard.png" alt="AI Flashcard Generator interface" class="project-thumbnail" onclick="openModal(this)" />
-            </picture>
-        </li>
+                <section class="content-section">
+                    <h2>Personal Projects</h2>
+                    
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <div class="project-details">
+                                <div class="project-header">
+                                    <h3 class="project-title">
+                                        <a href="https://www.github.com/alwnraj/asmcalc" target="_blank">Assembly & C Calculator (AsmCalc)</a>
+                                    </h3>
+                                </div>
+                                <p class="project-description">I wrote the x86 assembly math routines and stitched them to a small C program to make a command-line calculator. This is my first real blend of C and assembly, built with two friends for our CSE 525 Microcomputer Design class.</p>
+                            </div>
+                        </div>
 
-        <li>
-            <a href="https://www.github.com/alwnraj/macmemory">MacMemory - macOS Menu Bar Memory Monitor</a>
-            <p class="project-description">
-                Built a lightweight menu bar app for macOS that displays real-time memory usage of running applications. Made for personal use with Cursor.
-            </p>
-            <picture>
-                <source srcset="images/macmemory.webp" type="image/webp">
-                <img src="images/macmemory.png" alt="MacMemory menu bar app interface" class="project-thumbnail" onclick="openModal(this)" />
-            </picture>
-        </li>
-        </ul>
+                        <div class="project-card">
+                            <div class="project-details">
+                                <div class="project-header">
+                                    <h3 class="project-title">
+                                        <a href="https://www.github.com/alwnraj/ResearchBuddy" target="_blank">Research Buddy</a>
+                                    </h3>
+                                </div>
+                                <p class="project-description">Created a desktop reader that lets you chat with academic PDFs via Google's Gemini 2.5 Flash. Optimized for the browser and functions as either a pdf reader or a chatbot. <a href="https://researchbuddy.pages.dev/" target="_blank" class="demo-link">Try it here</a></p>
+                            </div>
+                            <picture>
+                        <source srcset="images/researchbuddy.webp" type="image/webp">
+                        <img src="images/researchbuddy.png" alt="Research Buddy interface" class="project-thumbnail" onclick="openModal(this)" />
+                    </picture>
+                        </div>
 
-        <!-- Modal -->
-        <div id="imageModal" class="modal">
-            <span class="modal-close" onclick="closeModal()">&times;</span>
-            <img class="modal-content" id="modalImage" />
+                        <div class="project-card">
+                            <div class="project-details">
+                                <div class="project-header">
+                                    <h3 class="project-title">
+                                        <a href="https://www.github.com/alwnraj/chat-app" target="_blank">Real-Time Chat application with Python, Flask & SocketIO</a>
+                                    </h3>
+                                </div>
+                                <p class="project-description">A real-time chat application built using Python, Flask, and SocketIO, allowing users to create chat rooms and send messages instantly.</p>
+                            </div>
+                            <picture>
+                        <source srcset="images/chatapp.webp" type="image/webp">
+                        <img src="images/chatapp.png" alt="Real-time chat application interface" class="project-thumbnail" onclick="openModal(this)" />
+                    </picture>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-details">
+                                <div class="project-header">
+                                    <h3 class="project-title">
+                                        <a href="https://www.github.com/alwnraj/pong" target="_blank">Classic Pong Game with Python and Pygame</a>
+                                    </h3>
+                                </div>
+                                <p class="project-description">Created a fully functional 2D Pong game using Python and the Pygame library</p>
+                            </div>
+                            <picture>
+                        <source srcset="images/pong.webp" type="image/webp">
+                        <img src="images/pong.png" alt="Classic Pong game screenshot" class="project-thumbnail" onclick="openModal(this)" />
+                    </picture>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-details">
+                                <div class="project-header">
+                                    <h3 class="project-title">
+                                        <a href="https://www.github.com/alwnraj/Space-invaders" target="_blank">2D Retro Space Invaders Game in C++</a>
+                                    </h3>
+                                </div>
+                                <p class="project-description">Independently designed and developed a fully functional 2D Retro Space Invaders game in C++ using Raylib, without the use of game engines.</p>
+                            </div>
+                            <picture>
+                        <source srcset="images/spaceinvaders.webp" type="image/webp">
+                        <img src="images/spaceinvaders.png" alt="Space Invaders game screenshot" class="project-thumbnail" onclick="openModal(this)" />
+                    </picture>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-details">
+                                <div class="project-header">
+                                    <h3 class="project-title">
+                                        <a href="https://www.github.com/alwnraj/smolmachine" target="_blank">Machine Learning using MobileNet in Javascript</a>
+                                    </h3>
+                                </div>
+                                <p class="project-description">Created a browser-based tool for image classification using a pre-trained machine learning model, MobileNet. The tool allows you to classify images and even train the machine to distinguish between two sets of images. <a href="https://alwnraj.github.io/smolmachine/" target="_blank" class="demo-link">Demo</a></p>
+                            </div>
+                            <picture>
+                        <source srcset="images/smolmachine.webp" type="image/webp">
+                        <img src="images/smolmachine.png" alt="SmolMachine web interface" class="project-thumbnail" onclick="openModal(this)" />
+                    </picture>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-details">
+                                <div class="project-header">
+                                    <h3 class="project-title">
+                                        <a href="https://www.github.com/alwnraj/flashcardgen" target="_blank">AI Flashcard Generator</a>
+                                    </h3>
+                                </div>
+                                <p class="project-description">Made a flashcard generator that leverages Google's Gemini to create flashcards from prompts, text, or PDFs. <a href="https://flashcardgen.pages.dev/" target="_blank" class="demo-link">Try it here</a></p>
+                            </div>
+                            <picture>
+                        <source srcset="images/aiflashcard.webp" type="image/webp">
+                        <img src="images/aiflashcard.png" alt="AI Flashcard Generator interface" class="project-thumbnail" onclick="openModal(this)" />
+                    </picture>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-details">
+                                <div class="project-header">
+                                    <h3 class="project-title">
+                                        <a href="https://www.github.com/alwnraj/macmemory" target="_blank">MacMemory - macOS Menu Bar Memory Monitor</a>
+                                    </h3>
+                                </div>
+                                <p class="project-description">Built a lightweight menu bar app for macOS that displays real-time memory usage of running applications. Made for personal use with Cursor.</p>
+                            </div>
+                            <picture>
+                        <source srcset="images/macmemory.webp" type="image/webp">
+                        <img src="images/macmemory.png" alt="MacMemory menu bar app interface" class="project-thumbnail" onclick="openModal(this)" />
+                    </picture>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer Navigation -->
+            <footer class="footer">
+                <nav class="footer-nav">
+                    <a href="https://github.com/alwnraj" target="_blank" class="nav-link">GitHub</a>
+                    <span class="nav-separator">/</span>
+                    <a href="https://www.linkedin.com/in/alwinrajkumar" target="_blank" class="nav-link">LinkedIn</a>
+                    <span class="nav-separator">/</span>
+                    <a href="Resume.pdf" target="_blank" class="nav-link">Resume</a>
+                    <span class="nav-separator">/</span>
+                    <a href="https://alwnraj.github.io/blog/" target="_blank" class="nav-link">Blog :)</a>
+                </nav>
+            </footer>
         </div>
 
-        <hr />
-        <nav>
-            <a href="https://github.com/alwnraj" target="_blank">Github</a> //
-            <a href="https://www.linkedin.com/in/alwinrajkumar" target="_blank">linkedin</a> //
-            <a href="Resume.pdf" target="_blank">Resume</a> //
-            <a href="https://alwnraj.github.io/blog/" target="_blank">Blog :)</a> //
-            <!--<a href="https://alwnraj.github.io/for-llms.html">For AI/LLMs</a>-->
-        </nav>
+        <!-- Image Modal -->
+        <div id="imageModal" class="modal" onclick="closeModal()">
+            <div class="modal-content">
+                <span class="modal-close" onclick="closeModal()">&times;</span>
+                <img class="modal-image" id="modalImage" />
+            </div>
+        </div>
+
+        <script>
+            const themeToggle = document.getElementById("themeToggle");
+            const storedTheme = localStorage.getItem("theme");
+            const prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+
+            if (storedTheme) {
+                document.body.dataset.theme = storedTheme;
+            } else if (prefersLight) {
+                document.body.dataset.theme = "light";
+            }
+
+            const updateToggleLabel = () => {
+                const isLight = document.body.dataset.theme === "light";
+                themeToggle.setAttribute("aria-label", isLight ? "Switch to dark mode" : "Switch to light mode");
+            };
+
+            updateToggleLabel();
+
+            function openModal(image) {
+                const modal = document.getElementById("imageModal");
+                const modalImage = document.getElementById("modalImage");
+                modal.style.display = "flex";
+                modalImage.src = image.src;
+            }
+        
+            function closeModal() {
+                const modal = document.getElementById("imageModal");
+                modal.style.display = "none";
+            }
+
+            // Close modal when clicking outside the image
+            document.getElementById("imageModal").addEventListener("click", function(e) {
+                if (e.target === this) {
+                    closeModal();
+                }
+            });
+
+            themeToggle.addEventListener("click", function() {
+                const isLight = document.body.dataset.theme === "light";
+                document.body.dataset.theme = isLight ? "dark" : "light";
+                localStorage.setItem("theme", document.body.dataset.theme);
+                updateToggleLabel();
+            });
+        </script>
     </body>
 </html>
