@@ -218,18 +218,18 @@
             }
 
             .theme-toggle {
-                position: fixed;
+                position: absolute;
                 top: 16px;
                 right: 16px;
-                background: #2a2a2a;
+                background: transparent;
                 color: #f8fafc;
-                border: 1px solid #404040;
-                border-radius: 999px;
-                padding: 6px;
+                border: none;
+                border-radius: 0;
+                padding: 4px;
                 width: 32px;
                 height: 32px;
                 cursor: pointer;
-                transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+                transition: color 0.2s ease;
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
@@ -237,17 +237,15 @@
             }
 
             .theme-toggle:hover {
-                background: #3a3a3a;
+                color: #93c5fd;
             }
 
             body[data-theme="light"] .theme-toggle {
-                background: #efe3c8;
                 color: #3b2f1f;
-                border-color: #d5c7a3;
             }
 
             body[data-theme="light"] .theme-toggle:hover {
-                background: #e4d5b4;
+                color: #6b4f2a;
             }
 
             .theme-toggle svg {
@@ -746,7 +744,16 @@
                 }
 
                 .project-card {
-                    gap: 16px;
+                    flex-direction: column;
+                    align-items: stretch;
+                    gap: 12px;
+                }
+
+                .project-thumbnail {
+                    width: 68%;
+                    max-width: 280px;
+                    height: auto;
+                    margin: 0 auto;
                 }
             }
 
@@ -783,6 +790,19 @@
 
                 .project-title {
                     font-size: 1.05em;
+                }
+
+                .project-card {
+                    flex-direction: column;
+                    align-items: stretch;
+                    gap: 10px;
+                }
+
+                .project-thumbnail {
+                    width: 70%;
+                    max-width: 240px;
+                    height: auto;
+                    margin: 0 auto;
                 }
             }
 
