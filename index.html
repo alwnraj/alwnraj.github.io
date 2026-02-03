@@ -302,6 +302,16 @@
                 color: #4a3a27;
             }
 
+            .about-section a {
+                text-decoration: underline;
+                text-underline-offset: 2px;
+            }
+
+            .now-section a {
+                text-decoration: underline;
+                text-underline-offset: 2px;
+            }
+
             /* Publications */
             .publication-item {
                 margin-bottom: 12px;
@@ -640,6 +650,7 @@
             @media (max-width: 600px) {
                 .container {
                     padding: 20px 20px 30px 20px;
+                    font-size: 17px;
                 }
 
                 .theme-toggle {
@@ -654,8 +665,12 @@
                 }
                 
                 .profile-image {
-                    width: 140px;
-                    height: 160px;
+                    width: 35vw;
+                    height: calc(35vw * 1.09);
+                    min-width: 140px;
+                    min-height: 152px;
+                    max-width: 180px;
+                    max-height: 196px;
                 }
 
                 .profile-info {
@@ -664,7 +679,15 @@
                 }
                 
                 .name {
-                    font-size: 1.7em;
+                    font-size: 1.5em;
+                }
+
+                .title {
+                    font-size: 1.05em;
+                }
+
+                .subtitle {
+                    font-size: 1em;
                 }
                 
                 .contact-links {
@@ -677,6 +700,89 @@
 
                 .project-card {
                     flex-direction: row;
+                }
+
+                .footer-nav {
+                    flex-wrap: nowrap;
+                    gap: 12px;
+                    font-size: 14px;
+                    white-space: nowrap;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .container {
+                    padding: 18px 16px 26px 16px;
+                    font-size: 16px;
+                }
+
+                .profile-section {
+                    gap: 12px;
+                }
+
+                .profile-image {
+                    width: 40vw;
+                    height: calc(40vw * 1.09);
+                    min-width: 130px;
+                    min-height: 142px;
+                    max-width: 170px;
+                    max-height: 185px;
+                }
+
+                .name {
+                    font-size: 1.35em;
+                }
+
+                .title {
+                    font-size: 1em;
+                }
+
+                .subtitle {
+                    font-size: 0.95em;
+                }
+
+                .contact-link {
+                    font-size: 14px;
+                }
+
+                .project-card {
+                    gap: 16px;
+                }
+            }
+
+            @media (max-width: 360px) {
+                .container {
+                    padding: 16px 12px 22px 12px;
+                    font-size: 15px;
+                }
+
+                .profile-section {
+                    gap: 10px;
+                }
+
+                .profile-image {
+                    width: 44vw;
+                    height: calc(44vw * 1.09);
+                    min-width: 120px;
+                    min-height: 131px;
+                    max-width: 160px;
+                    max-height: 174px;
+                }
+
+                .name {
+                    font-size: 1.25em;
+                }
+
+                .title {
+                    font-size: 0.95em;
+                }
+
+                .subtitle {
+                    font-size: 0.9em;
+                }
+
+                .project-title {
+                    font-size: 1.05em;
                 }
             }
 
@@ -742,13 +848,13 @@
 
             <!-- Main Content -->
             <main class="main-content">
-                <section class="content-section">
+                <section class="content-section about-section">
                     <h2>About</h2>
                     <p>My name is Alwin Rajkumar and I'm a senior at the University of Louisville studying Computer Science & Engineering. I love solving hard problems with new and interesting solutions. I've open-sourced a number of my projects on <a href="https://github.com/alwnraj">github</a>. I am looking for internships to grow my skills in the world of computer science, so feel free to connect with me on <a href="https://www.linkedin.com/in/alwinrajkumar/">linkedin</a> or write me to <a href="mailto:a0rajk01@louisville.edu">mail</a>.</p>
                     <p>See more on my <a href="Resume.pdf" target="_blank">resume</a></p>
                 </section>
 
-                <section class="content-section">
+                <section class="content-section now-section">
                     <h2>What am I doing now?</h2>
                     <p>At the moment, I'm working as a Research Assistant Intern at the Louisville Automation & Robotics Research Institute, where I design and implement computer vision pipelines for drone-based perception and localization. I'm also working with <a href="https://engineering.louisville.edu/faculty/campbell-bego/">Dr.Bego</a> on generative AI research, where I co-authored papers including "Expertise and Trust in GenAI". I am also working with <a href="https://engineering.louisville.edu/faculty/sabur-h-baidya/">Dr.Baidya</a> on Computer Vision algorithms, mainly for the use on drones.</p>
                 </section>
