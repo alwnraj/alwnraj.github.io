@@ -217,55 +217,6 @@
                 color: #6b4f2a;
             }
 
-            .theme-toggle {
-                position: absolute;
-                top: 16px;
-                right: 16px;
-                background: transparent;
-                color: #f8fafc;
-                border: none;
-                border-radius: 0;
-                padding: 4px;
-                width: 32px;
-                height: 32px;
-                cursor: pointer;
-                transition: color 0.2s ease;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                z-index: 1100;
-            }
-
-            .theme-toggle:hover {
-                color: #93c5fd;
-            }
-
-            body[data-theme="light"] .theme-toggle {
-                color: #3b2f1f;
-            }
-
-            body[data-theme="light"] .theme-toggle:hover {
-                color: #6b4f2a;
-            }
-
-            .theme-toggle svg {
-                width: 16px;
-                height: 16px;
-                display: block;
-            }
-
-            .theme-toggle .icon-sun,
-            .theme-toggle .icon-moon {
-                display: none;
-            }
-
-            body[data-theme="light"] .theme-toggle .icon-moon {
-                display: block;
-            }
-
-            body:not([data-theme="light"]) .theme-toggle .icon-sun {
-                display: block;
-            }
             /* Main content */
             .main-content {
                 margin-bottom: 20px;
@@ -651,11 +602,6 @@
                     font-size: 17px;
                 }
 
-                .theme-toggle {
-                    top: 14px;
-                    right: 14px;
-                }
-                
                 .profile-section {
                     flex-direction: row;
                     gap: 15px;
@@ -757,6 +703,14 @@
                 }
             }
 
+            @media (max-width: 420px) {
+                .contact-link--email {
+                    font-size: 13px;
+                    line-height: 1.2;
+                    word-break: break-word;
+                }
+            }
+
             @media (max-width: 360px) {
                 .container {
                     padding: 16px 12px 22px 12px;
@@ -810,22 +764,6 @@
     </head>
     <body>
         <div class="container">
-            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">
-                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <circle cx="12" cy="12" r="4"></circle>
-                    <line x1="12" y1="2" x2="12" y2="5"></line>
-                    <line x1="12" y1="19" x2="12" y2="22"></line>
-                    <line x1="2" y1="12" x2="5" y2="12"></line>
-                    <line x1="19" y1="12" x2="22" y2="12"></line>
-                    <line x1="4.2" y1="4.2" x2="6.3" y2="6.3"></line>
-                    <line x1="17.7" y1="17.7" x2="19.8" y2="19.8"></line>
-                    <line x1="17.7" y1="6.3" x2="19.8" y2="4.2"></line>
-                    <line x1="4.2" y1="19.8" x2="6.3" y2="17.7"></line>
-                </svg>
-                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>
-                </svg>
-            </button>
             <!-- Header Section -->
             <header class="header">
                 <div class="header-content">
@@ -839,7 +777,7 @@
                             <p class="title">Computer Science & Engineering Student</p>
                             <p class="subtitle">University of Louisville</p>
                             <div class="contact-links">
-                                <a href="mailto:a0rajk01@louisville.edu" class="contact-link">
+                                <a href="mailto:a0rajk01@louisville.edu" class="contact-link contact-link--email">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                                         <polyline points="22,6 12,13 2,6"/>
@@ -1059,22 +997,11 @@
         </div>
 
         <script>
-            const themeToggle = document.getElementById("themeToggle");
-            const storedTheme = localStorage.getItem("theme");
             const prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
 
-            if (storedTheme) {
-                document.body.dataset.theme = storedTheme;
-            } else if (prefersLight) {
+            if (prefersLight) {
                 document.body.dataset.theme = "light";
             }
-
-            const updateToggleLabel = () => {
-                const isLight = document.body.dataset.theme === "light";
-                themeToggle.setAttribute("aria-label", isLight ? "Switch to dark mode" : "Switch to light mode");
-            };
-
-            updateToggleLabel();
 
             function openModal(image) {
                 const modal = document.getElementById("imageModal");
@@ -1095,12 +1022,6 @@
                 }
             });
 
-            themeToggle.addEventListener("click", function() {
-                const isLight = document.body.dataset.theme === "light";
-                document.body.dataset.theme = isLight ? "dark" : "light";
-                localStorage.setItem("theme", document.body.dataset.theme);
-                updateToggleLabel();
-            });
         </script>
     </body>
 </html>
