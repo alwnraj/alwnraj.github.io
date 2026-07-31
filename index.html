@@ -38,11 +38,17 @@
         "email": "a0rajk01@louisville.edu"
     }
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preload" href="fonts/lora-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="icon" type="image/webp" href="images/my-notion-face-transparent.webp" />
     <style>
+        @font-face {
+            font-family: "Lora";
+            font-style: normal;
+            font-weight: 400 700;
+            font-display: swap;
+            src: url("fonts/lora-latin.woff2") format("woff2");
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
@@ -262,9 +268,20 @@
             color: #f8fafc;
         }
 
+        .featured-project a,
+        #projects a {
+            text-decoration-thickness: 0.5px;
+            transition: text-decoration-thickness 0.15s ease;
+        }
+
+        .featured-project a:hover,
+        #projects a:hover {
+            color: #93c5fd;
+            text-decoration-thickness: 1.5px;
+        }
+
         .project-item h3 a,
         .featured-project h3 a {
-            text-decoration-thickness: 1px;
             text-underline-offset: 3px;
         }
 

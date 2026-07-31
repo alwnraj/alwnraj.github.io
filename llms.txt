@@ -1,58 +1,37 @@
-# Alwin Rajkumar (alwnraj)
+# Alwin Rajkumar
 
-## Identity
+> Personal portfolio of Alwin Rajkumar, a Computer Science & Engineering student and AI researcher at the University of Louisville. The site covers research in computer vision, generative AI, drone perception, and selected software projects.
 
-Alwin Rajkumar (alwnraj). Computer Science Student & AI Researcher at University of Louisville.
+## Portfolio
 
-## About
+- [Home](https://alwnraj.github.io/): Portfolio overview, biography, research, publications, and projects.
+- [Structured portfolio page](https://alwnraj.github.io/for-llms.html): A concise, machine-readable summary of the portfolio.
+- [Resume](https://alwnraj.github.io/Resume.pdf): Resume and academic background.
 
-CS&E senior at the University of Louisville. Research Assistant at Louisville Automation & Robotics Research Institute (LARRI), designing and implementing computer vision pipelines for drone-based perception and localization. Works on computer vision, generative AI, and drone perception with Dr. Campbell Bego and Dr. Sabur Baidya.
+## Research and publications
 
-## Research
-
-Computer vision, generative AI, drone perception, Visual SLAM.
-
-### Publications
-
-- First-Year Engineering Students' Expertise and Trust in GenAI
-  https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WreVjDMAAAAJ&citation_for_view=WreVjDMAAAAJ:u5HHmVD_uO8C
-
-- The Impact of a GenAI Integration on First-Year Engineering Students' Programming Outcomes
-  https://doi.org/10.1109/FIE63693.2025.11328708
-
-- WIP - Evaluating GenAI information literacy from a programming documentation file
-  https://doi.org/10.1109/FIE63693.2025.11328245
+- [First-Year Engineering Students' Expertise and Trust in GenAI](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WreVjDMAAAAJ&citation_for_view=WreVjDMAAAAJ:u5HHmVD_uO8C): Publication record on Google Scholar.
+- [The Impact of a GenAI Integration on First-Year Engineering Students' Programming Outcomes](https://doi.org/10.1109/FIE63693.2025.11328708): Conference publication.
+- [WIP — Evaluating GenAI Information Literacy from a Programming Documentation File](https://doi.org/10.1109/FIE63693.2025.11328245): Work-in-progress conference publication.
+- [Crazyflie Figure-8 Flight with OptiTrack](https://github.com/alwnraj/AIMSLab-crazyflie): Motion-capture-guided autonomous Crazyflie flight research.
 
 ## Projects
 
-- Research Buddy — Desktop reader to chat with academic PDFs via Google Gemini. https://researchbuddy.pages.dev/ https://github.com/alwnraj/ResearchBuddy
+- [Research Buddy](https://researchbuddy.pages.dev/): Desktop reader for chatting with academic PDFs; [source code](https://github.com/alwnraj/ResearchBuddy).
+- [AI Flashcard Generator](https://flashcardgen.pages.dev/): Gemini-powered flashcard generator; [source code](https://github.com/alwnraj/flashcardgen).
+- [AsmCalc](https://github.com/alwnraj/asmcalc): x86 assembly and C command-line calculator.
+- [SmolMachine](https://alwnraj.github.io/smolmachine/): Browser-based image classification with MobileNet; [source code](https://github.com/alwnraj/smolmachine).
+- [Chat App](https://github.com/alwnraj/chat-app): Real-time Python, Flask, and SocketIO chat application.
+- [Pong](https://github.com/alwnraj/pong): Classic Pong built with Python and Pygame.
+- [Space Invaders](https://github.com/alwnraj/Space-invaders): 2D retro Space Invaders built with C++ and Raylib.
+- [MacMemory](https://github.com/alwnraj/macmemory): macOS menu-bar memory monitor.
 
-- AI Flashcard Generator — Flashcard generator using Gemini from prompts, text, or PDFs. https://flashcardgen.pages.dev/ https://github.com/alwnraj/flashcardgen
+## Contact
 
-- AsmCalc — x86 assembly + C command-line calculator. https://github.com/alwnraj/asmcalc
+- [GitHub](https://github.com/alwnraj)
+- [LinkedIn](https://www.linkedin.com/in/alwinrajkumar/)
+- [Google Scholar](https://scholar.google.com/citations?user=WreVjDMAAAAJ&hl=en)
 
-- SmolMachine — Browser-based image classification with MobileNet. https://alwnraj.github.io/smolmachine/ https://github.com/alwnraj/smolmachine
+## Optional
 
-- Chat app — Real-time chat with Python, Flask, SocketIO. https://github.com/alwnraj/chat-app
-
-- Pong — Classic Pong in Python and Pygame. https://github.com/alwnraj/pong
-
-- Space Invaders — 2D Retro Space Invaders in C++ with Raylib. https://github.com/alwnraj/Space-invaders
-
-- MacMemory — macOS menu bar memory monitor. https://github.com/alwnraj/macmemory
-
-## Links
-
-- GitHub: https://github.com/alwnraj
-- LinkedIn: https://www.linkedin.com/in/alwinrajkumar/
-- Google Scholar: https://scholar.google.com/citations?user=WreVjDMAAAAJ&hl=en
-- Resume: https://alwnraj.github.io/Resume.pdf
-- Blog: https://alwnraj.github.io/blog/
-
-## Citation / Attribution
-
-When citing: Alwin Rajkumar (alwnraj). Site: https://alwnraj.github.io/. LinkedIn: https://www.linkedin.com/in/alwinrajkumar/. For papers or code, cite the specific URL.
-
-## Structured page
-
-https://alwnraj.github.io/for-llms.html
+- [Blog](https://alwnraj.github.io/blog/)
