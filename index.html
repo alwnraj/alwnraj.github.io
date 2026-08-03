@@ -391,8 +391,11 @@
 
         <div class="hero">
             <picture>
-                <source srcset="images/profile_picture.webp" type="image/webp">
-                <img src="images/profile_picture.jpeg" alt="Alwin Rajkumar" />
+                <source
+                    srcset="images/profile_picture-256.webp 256w, images/profile_picture.webp 640w"
+                    sizes="(max-width: 500px) 100px, 120px"
+                    type="image/webp">
+                <img src="images/profile_picture.jpeg" alt="Alwin Rajkumar" width="120" height="130" fetchpriority="high" decoding="async" />
             </picture>
             <div class="hero-text">
                 <h1>Alwin Rajkumar</h1>
@@ -445,7 +448,7 @@
                 <p>I built a motion-capture-guided controller that maps OptiTrack pose data into the Crazyflie’s local frame, streams external-position estimates to the drone, and autonomously tracks a cage-aware figure-8 path in X/Y. Altitude is defined in code and maintained throughout flight through continuous motion-capture feedback.</p>
                 <div class="featured-video">
                     <video autoplay muted loop playsinline preload="metadata" aria-label="Looping preview of the Crazyflie figure-8 flight">
-                        <source src="images/crazyflie-figure8-loop.mp4" type="video/mp4" />
+              <source src="images/crazyflie-figure8.mp4" type="video/mp4" />
                     </video>
                 </div>
             </article>
@@ -460,37 +463,37 @@
             <div class="project-item">
                 <h3><a href="https://www.github.com/alwnraj/ResearchBuddy" target="_blank">Research Buddy</a></h3>
                 <p>Created a desktop reader that lets you chat with academic PDFs via Google's Gemini 2.5 Flash. Optimized for the browser and functions as either a pdf reader or a chatbot. <a href="https://researchbuddy.pages.dev/" target="_blank" class="demo-link">Try it here</a></p>
-                <picture><source srcset="images/researchbuddy.webp" type="image/webp"><img src="images/researchbuddy.png" alt="Research Buddy interface" class="thumb" loading="lazy" /></picture>
+                <picture><source srcset="images/researchbuddy.webp" type="image/webp"><img src="images/researchbuddy.png" alt="Research Buddy interface" class="thumb" loading="lazy" decoding="async" width="140" height="93" /></picture>
             </div>
             <div class="project-item">
                 <h3><a href="https://www.github.com/alwnraj/chat-app" target="_blank">Real-Time Chat application with Python, Flask & SocketIO</a></h3>
                 <p>A real-time chat application built using Python, Flask, and SocketIO, allowing users to create chat rooms and send messages instantly.</p>
-                <picture><source srcset="images/chatapp.webp" type="image/webp"><img src="images/chatapp.png" alt="Real-time chat application interface" class="thumb" loading="lazy" /></picture>
+                <picture><source srcset="images/chatapp.webp" type="image/webp"><img src="images/chatapp.png" alt="Real-time chat application interface" class="thumb" loading="lazy" decoding="async" width="140" height="72" /></picture>
             </div>
             <div class="project-item">
                 <h3><a href="https://www.github.com/alwnraj/pong" target="_blank">Classic Pong Game with Python and Pygame</a></h3>
                 <p>Created a fully functional 2D Pong game using Python and the Pygame library</p>
-                <picture><source srcset="images/pong.webp" type="image/webp"><img src="images/pong.png" alt="Classic Pong game screenshot" class="thumb" loading="lazy" /></picture>
+                <picture><source srcset="images/pong.webp" type="image/webp"><img src="images/pong.png" alt="Classic Pong game screenshot" class="thumb" loading="lazy" decoding="async" width="140" height="107" /></picture>
             </div>
             <div class="project-item">
                 <h3><a href="https://www.github.com/alwnraj/Space-invaders" target="_blank">2D Retro Space Invaders Game in C++</a></h3>
                 <p>Independently designed and developed a fully functional 2D Retro Space Invaders game in C++ using Raylib, without the use of game engines.</p>
-                <picture><source srcset="images/spaceinvaders.webp" type="image/webp"><img src="images/spaceinvaders.png" alt="Space Invaders game screenshot" class="thumb" loading="lazy" /></picture>
+                <picture><source srcset="images/spaceinvaders.webp" type="image/webp"><img src="images/spaceinvaders.png" alt="Space Invaders game screenshot" class="thumb" loading="lazy" decoding="async" width="140" height="147" /></picture>
             </div>
             <div class="project-item">
                 <h3><a href="https://www.github.com/alwnraj/smolmachine" target="_blank">Machine Learning using MobileNet in Javascript</a></h3>
                 <p>Created a browser-based tool for image classification using a pre-trained machine learning model, MobileNet. The tool allows you to classify images and even train the machine to distinguish between two sets of images. <a href="https://alwnraj.github.io/smolmachine/" target="_blank" class="demo-link">Demo</a></p>
-                <picture><source srcset="images/smolmachine.webp" type="image/webp"><img src="images/smolmachine.png" alt="SmolMachine web interface" class="thumb" loading="lazy" /></picture>
+                <picture><source srcset="images/smolmachine.webp" type="image/webp"><img src="images/smolmachine.png" alt="SmolMachine web interface" class="thumb" loading="lazy" decoding="async" width="140" height="80" /></picture>
             </div>
             <div class="project-item">
                 <h3><a href="https://www.github.com/alwnraj/flashcardgen" target="_blank">AI Flashcard Generator</a></h3>
                 <p>Made a flashcard generator that leverages Google's Gemini to create flashcards from prompts, text, or PDFs. <a href="https://flashcardgen.pages.dev/" target="_blank" class="demo-link">Try it here</a></p>
-                <picture><source srcset="images/aiflashcard.webp" type="image/webp"><img src="images/aiflashcard.png" alt="AI Flashcard Generator interface" class="thumb" loading="lazy" /></picture>
+                <picture><source srcset="images/aiflashcard.webp" type="image/webp"><img src="images/aiflashcard.png" alt="AI Flashcard Generator interface" class="thumb" loading="lazy" decoding="async" width="140" height="140" /></picture>
             </div>
             <div class="project-item">
                 <h3><a href="https://www.github.com/alwnraj/macmemory" target="_blank">MacMemory - macOS Menu Bar Memory Monitor</a></h3>
                 <p>Built a lightweight menu bar app for macOS that displays real-time memory usage of running applications. Made for personal use with Cursor.</p>
-                <picture><source srcset="images/macmemory.webp" type="image/webp"><img src="images/macmemory.png" alt="MacMemory menu bar app interface" class="thumb" loading="lazy" /></picture>
+                <picture><source srcset="images/macmemory.webp" type="image/webp"><img src="images/macmemory.png" alt="MacMemory menu bar app interface" class="thumb" loading="lazy" decoding="async" width="140" height="122" /></picture>
             </div>
         </section>
 
