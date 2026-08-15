@@ -91,12 +91,11 @@
         body[data-theme="light"] .footer-nav a:hover { color: #6b4f2a; }
 
         .theme-btn {
-            position: fixed;
-            top: 12px;
-            right: 12px;
+            position: static;
+            margin-left: 0;
             width: 28px;
             height: 28px;
-            border: 1px solid #404040;
+            border: 0;
             background: transparent;
             color: #9ca3af;
             font-size: 14px;
@@ -105,22 +104,36 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: color 0.2s, border-color 0.2s, background 0.2s;
+            flex-shrink: 0;
+            transition: color 0.2s, background 0.2s;
         }
 
         .theme-btn:hover {
             color: #60a5fa;
-            border-color: #60a5fa;
+        }
+
+        .theme-btn:focus-visible {
+            outline: 2px solid currentColor;
+            outline-offset: 3px;
         }
 
         body[data-theme="light"] .theme-btn {
-            border-color: #d5c7a3;
             color: #7a6848;
         }
 
         body[data-theme="light"] .theme-btn:hover {
             color: #6b4f2a;
-            border-color: #6b4f2a;
+        }
+
+        .container > nav:first-of-type {
+            position: relative;
+            padding-right: 44px;
+        }
+
+        .container > nav:first-of-type .theme-btn {
+            position: absolute;
+            top: -2px;
+            right: 0;
         }
 
         .container {
@@ -238,6 +251,57 @@
 
         .hero-links svg {
             flex-shrink: 0;
+        }
+
+        .github-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0;
+        }
+
+        .github-mark {
+            order: 2;
+            width: 0;
+            height: 1em;
+            flex: 0 0 0;
+            margin-left: 0;
+            opacity: 0;
+            overflow: hidden;
+            vertical-align: -0.12em;
+            transform: translateX(-4px) scale(0.65);
+            transition: width 0.18s ease, flex-basis 0.18s ease, margin-left 0.18s ease, opacity 0.12s ease, transform 0.18s ease;
+        }
+
+        .github-link:hover .github-mark,
+        .github-link:focus-visible .github-mark {
+            width: 1em;
+            flex-basis: 1em;
+            margin-left: 0.35em;
+            opacity: 1;
+            transform: translateX(0) rotate(-8deg) scale(1.08);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .github-mark {
+                transition: none;
+            }
+
+            .github-link:hover .github-mark,
+            .github-link:focus-visible .github-mark {
+                transform: none;
+            }
+        }
+
+        .hero-links .github-link .github-mark {
+            order: 0;
+            width: 16px;
+            height: 16px;
+            flex-basis: 16px;
+            margin-left: 0;
+            opacity: 1;
+            overflow: visible;
+            transform: none;
+            transition: none;
         }
 
         section p {
@@ -369,6 +433,14 @@
         body[data-theme="light"] .featured-project h3 { color: #2f2417; }
 
         @media (max-width: 500px) {
+            .container > nav:first-of-type {
+                padding-right: 0;
+            }
+
+            .container > nav:first-of-type .theme-btn {
+                display: none;
+            }
+
             .hero {
                 flex-direction: column;
             }
@@ -380,13 +452,13 @@
     </style>
 </head>
 <body>
-    <button type="button" class="theme-btn" id="themeBtn" aria-label="Toggle theme" title="Toggle light/dark">☽</button>
     <div class="container">
         <nav>
             <a href="#">Home</a>
             <a href="#projects">Projects</a>
             <a href="#research">Research</a>
             <a href="https://alwnraj.github.io/blog/">Blog</a>
+            <button type="button" class="theme-btn" id="themeBtn" aria-label="Toggle theme" title="Toggle light/dark">☽</button>
         </nav>
 
         <div class="hero">
@@ -406,8 +478,8 @@
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                         a0rajk01@louisville.edu
                     </a>
-                    <a href="https://github.com/alwnraj" target="_blank">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-1.94-2.63c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    <a class="github-link" href="https://github.com/alwnraj" target="_blank">
+                        <svg class="github-mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.091-.646.35-1.087.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.682-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.294 2.748-1.025 2.748-1.025.546 1.377.203 2.394.1 2.647.64.698 1.028 1.591 1.028 2.682 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.744 0 .267.18.579.688.481A10.001 10.001 0 0 0 22 12c0-5.523-4.477-10-10-10Z"/></svg>
                         GitHub
                     </a>
                     <a href="https://www.linkedin.com/in/alwinrajkumar/" target="_blank">
@@ -444,7 +516,7 @@
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
             <article class="featured-project">
-                <h3><a href="https://github.com/alwnraj/AIMSLab-crazyflie" target="_blank">Crazyflie Figure-8 Flight with OptiTrack</a></h3>
+                <h3><a class="github-link" href="https://github.com/alwnraj/AIMSLab-crazyflie" target="_blank"><svg class="github-mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.091-.646.35-1.087.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.682-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.294 2.748-1.025 2.748-1.025.546 1.377.203 2.394.1 2.647.64.698 1.028 1.591 1.028 2.682 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.744 0 .267.18.579.688.481A10.001 10.001 0 0 0 22 12c0-5.523-4.477-10-10-10Z"/></svg>Crazyflie Figure-8 Flight with OptiTrack</a></h3>
                 <p>I built a motion-capture-guided controller that maps OptiTrack pose data into the Crazyflie’s local frame, streams external-position estimates to the drone, and autonomously tracks a cage-aware figure-8 path in X/Y. Altitude is defined in code and maintained throughout flight through continuous motion-capture feedback.</p>
                 <div class="featured-video">
                     <video autoplay muted loop playsinline preload="metadata" aria-label="Looping preview of the Crazyflie figure-8 flight">
@@ -457,48 +529,48 @@
         <section id="projects">
             <h2>Personal Projects</h2>
             <div class="project-item">
-                <h3><a href="https://www.github.com/alwnraj/asmcalc" target="_blank">Assembly & C Calculator (AsmCalc)</a></h3>
+                <h3><a class="github-link" href="https://www.github.com/alwnraj/asmcalc" target="_blank"><svg class="github-mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.091-.646.35-1.087.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.682-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.294 2.748-1.025 2.748-1.025.546 1.377.203 2.394.1 2.647.64.698 1.028 1.591 1.028 2.682 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.744 0 .267.18.579.688.481A10.001 10.001 0 0 0 22 12c0-5.523-4.477-10-10-10Z"/></svg>Assembly & C Calculator (AsmCalc)</a></h3>
                 <p>I wrote the x86 assembly math routines and stitched them to a small C program to make a command-line calculator. This is my first real blend of C and assembly, built with two friends for our CSE 525 Microcomputer Design class.</p>
             </div>
             <div class="project-item">
-                <h3><a href="https://www.github.com/alwnraj/ResearchBuddy" target="_blank">Research Buddy</a></h3>
+                <h3><a class="github-link" href="https://www.github.com/alwnraj/ResearchBuddy" target="_blank"><svg class="github-mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.091-.646.35-1.087.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.682-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.294 2.748-1.025 2.748-1.025.546 1.377.203 2.394.1 2.647.64.698 1.028 1.591 1.028 2.682 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.744 0 .267.18.579.688.481A10.001 10.001 0 0 0 22 12c0-5.523-4.477-10-10-10Z"/></svg>Research Buddy</a></h3>
                 <p>Created a desktop reader that lets you chat with academic PDFs via Google's Gemini 2.5 Flash. Optimized for the browser and functions as either a pdf reader or a chatbot. <a href="https://researchbuddy.pages.dev/" target="_blank" class="demo-link">Try it here</a></p>
                 <picture><source srcset="images/researchbuddy.webp" type="image/webp"><img src="images/researchbuddy.png" alt="Research Buddy interface" class="thumb" loading="lazy" decoding="async" width="140" height="93" /></picture>
             </div>
             <div class="project-item">
-                <h3><a href="https://www.github.com/alwnraj/chat-app" target="_blank">Real-Time Chat application with Python, Flask & SocketIO</a></h3>
+                <h3><a class="github-link" href="https://www.github.com/alwnraj/chat-app" target="_blank"><svg class="github-mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.091-.646.35-1.087.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.682-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.294 2.748-1.025 2.748-1.025.546 1.377.203 2.394.1 2.647.64.698 1.028 1.591 1.028 2.682 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.744 0 .267.18.579.688.481A10.001 10.001 0 0 0 22 12c0-5.523-4.477-10-10-10Z"/></svg>Real-Time Chat application with Python, Flask & SocketIO</a></h3>
                 <p>A real-time chat application built using Python, Flask, and SocketIO, allowing users to create chat rooms and send messages instantly.</p>
                 <picture><source srcset="images/chatapp.webp" type="image/webp"><img src="images/chatapp.png" alt="Real-time chat application interface" class="thumb" loading="lazy" decoding="async" width="140" height="72" /></picture>
             </div>
             <div class="project-item">
-                <h3><a href="https://www.github.com/alwnraj/pong" target="_blank">Classic Pong Game with Python and Pygame</a></h3>
+                <h3><a class="github-link" href="https://www.github.com/alwnraj/pong" target="_blank"><svg class="github-mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.091-.646.35-1.087.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.682-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.294 2.748-1.025 2.748-1.025.546 1.377.203 2.394.1 2.647.64.698 1.028 1.591 1.028 2.682 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.744 0 .267.18.579.688.481A10.001 10.001 0 0 0 22 12c0-5.523-4.477-10-10-10Z"/></svg>Classic Pong Game with Python and Pygame</a></h3>
                 <p>Created a fully functional 2D Pong game using Python and the Pygame library</p>
                 <picture><source srcset="images/pong.webp" type="image/webp"><img src="images/pong.png" alt="Classic Pong game screenshot" class="thumb" loading="lazy" decoding="async" width="140" height="107" /></picture>
             </div>
             <div class="project-item">
-                <h3><a href="https://www.github.com/alwnraj/Space-invaders" target="_blank">2D Retro Space Invaders Game in C++</a></h3>
+                <h3><a class="github-link" href="https://www.github.com/alwnraj/Space-invaders" target="_blank"><svg class="github-mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.091-.646.35-1.087.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.682-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.294 2.748-1.025 2.748-1.025.546 1.377.203 2.394.1 2.647.64.698 1.028 1.591 1.028 2.682 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.744 0 .267.18.579.688.481A10.001 10.001 0 0 0 22 12c0-5.523-4.477-10-10-10Z"/></svg>2D Retro Space Invaders Game in C++</a></h3>
                 <p>Independently designed and developed a fully functional 2D Retro Space Invaders game in C++ using Raylib, without the use of game engines.</p>
                 <picture><source srcset="images/spaceinvaders.webp" type="image/webp"><img src="images/spaceinvaders.png" alt="Space Invaders game screenshot" class="thumb" loading="lazy" decoding="async" width="140" height="147" /></picture>
             </div>
             <div class="project-item">
-                <h3><a href="https://www.github.com/alwnraj/smolmachine" target="_blank">Machine Learning using MobileNet in Javascript</a></h3>
+                <h3><a class="github-link" href="https://www.github.com/alwnraj/smolmachine" target="_blank"><svg class="github-mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.091-.646.35-1.087.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.682-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.294 2.748-1.025 2.748-1.025.546 1.377.203 2.394.1 2.647.64.698 1.028 1.591 1.028 2.682 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.744 0 .267.18.579.688.481A10.001 10.001 0 0 0 22 12c0-5.523-4.477-10-10-10Z"/></svg>Machine Learning using MobileNet in Javascript</a></h3>
                 <p>Created a browser-based tool for image classification using a pre-trained machine learning model, MobileNet. The tool allows you to classify images and even train the machine to distinguish between two sets of images. <a href="https://alwnraj.github.io/smolmachine/" target="_blank" class="demo-link">Demo</a></p>
                 <picture><source srcset="images/smolmachine.webp" type="image/webp"><img src="images/smolmachine.png" alt="SmolMachine web interface" class="thumb" loading="lazy" decoding="async" width="140" height="80" /></picture>
             </div>
             <div class="project-item">
-                <h3><a href="https://www.github.com/alwnraj/flashcardgen" target="_blank">AI Flashcard Generator</a></h3>
+                <h3><a class="github-link" href="https://www.github.com/alwnraj/flashcardgen" target="_blank"><svg class="github-mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.091-.646.35-1.087.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.682-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.294 2.748-1.025 2.748-1.025.546 1.377.203 2.394.1 2.647.64.698 1.028 1.591 1.028 2.682 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.744 0 .267.18.579.688.481A10.001 10.001 0 0 0 22 12c0-5.523-4.477-10-10-10Z"/></svg>AI Flashcard Generator</a></h3>
                 <p>Made a flashcard generator that leverages Google's Gemini to create flashcards from prompts, text, or PDFs. <a href="https://flashcardgen.pages.dev/" target="_blank" class="demo-link">Try it here</a></p>
                 <picture><source srcset="images/aiflashcard.webp" type="image/webp"><img src="images/aiflashcard.png" alt="AI Flashcard Generator interface" class="thumb" loading="lazy" decoding="async" width="140" height="140" /></picture>
             </div>
             <div class="project-item">
-                <h3><a href="https://www.github.com/alwnraj/macmemory" target="_blank">MacMemory - macOS Menu Bar Memory Monitor</a></h3>
+                <h3><a class="github-link" href="https://www.github.com/alwnraj/macmemory" target="_blank"><svg class="github-mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.091-.646.35-1.087.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.682-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.294 2.748-1.025 2.748-1.025.546 1.377.203 2.394.1 2.647.64.698 1.028 1.591 1.028 2.682 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.744 0 .267.18.579.688.481A10.001 10.001 0 0 0 22 12c0-5.523-4.477-10-10-10Z"/></svg>MacMemory - macOS Menu Bar Memory Monitor</a></h3>
                 <p>Built a lightweight menu bar app for macOS that displays real-time memory usage of running applications. Made for personal use with Cursor.</p>
                 <picture><source srcset="images/macmemory.webp" type="image/webp"><img src="images/macmemory.png" alt="MacMemory menu bar app interface" class="thumb" loading="lazy" decoding="async" width="140" height="122" /></picture>
             </div>
         </section>
 
         <nav class="footer-nav">
-            <a href="https://github.com/alwnraj" target="_blank">GitHub</a>
+            <a class="github-link" href="https://github.com/alwnraj" target="_blank"><svg class="github-mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.091-.646.35-1.087.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.682-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.294 2.748-1.025 2.748-1.025.546 1.377.203 2.394.1 2.647.64.698 1.028 1.591 1.028 2.682 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.744 0 .267.18.579.688.481A10.001 10.001 0 0 0 22 12c0-5.523-4.477-10-10-10Z"/></svg>GitHub</a>
             <a href="https://www.linkedin.com/in/alwinrajkumar" target="_blank">LinkedIn</a>
             <a href="Resume.pdf" target="_blank">Resume</a>
             <a href="https://alwnraj.github.io/blog/" target="_blank">Blog :)</a>
