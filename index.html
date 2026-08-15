@@ -128,7 +128,6 @@
         .container > nav:first-of-type {
             position: relative;
             padding-right: 44px;
-            font-size: clamp(12px, 3.5vw, 15px);
         }
 
         .container > nav:first-of-type .theme-btn {
@@ -422,6 +421,14 @@
         body[data-theme="light"] .featured-project h3 { color: #2f2417; }
 
         @media (max-width: 500px) {
+            .container > nav:first-of-type {
+                padding-right: 0;
+            }
+
+            .container > nav:first-of-type .theme-btn {
+                display: none;
+            }
+
             .hero {
                 flex-direction: column;
             }
