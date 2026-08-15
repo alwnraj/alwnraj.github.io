@@ -243,20 +243,28 @@
         .github-link {
             display: inline-flex;
             align-items: center;
-            gap: 0.35em;
+            gap: 0;
         }
 
         .github-mark {
-            width: 1em;
+            order: 2;
+            width: 0;
             height: 1em;
-            flex: 0 0 auto;
+            flex: 0 0 0;
+            margin-left: 0;
+            opacity: 0;
+            overflow: hidden;
             vertical-align: -0.12em;
-            transition: transform 0.18s ease;
+            transform: translateX(-4px) scale(0.65);
+            transition: width 0.18s ease, margin-left 0.18s ease, opacity 0.12s ease, transform 0.18s ease;
         }
 
         .github-link:hover .github-mark,
         .github-link:focus-visible .github-mark {
-            transform: rotate(-8deg) scale(1.08);
+            width: 1em;
+            margin-left: 0.35em;
+            opacity: 1;
+            transform: translateX(0) rotate(-8deg) scale(1.08);
         }
 
         @media (prefers-reduced-motion: reduce) {
