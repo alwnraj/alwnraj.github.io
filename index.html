@@ -92,7 +92,7 @@
 
         .theme-btn {
             position: static;
-            margin-left: auto;
+            margin-left: 0;
             width: 28px;
             height: 28px;
             border: 0;
@@ -123,6 +123,17 @@
 
         body[data-theme="light"] .theme-btn:hover {
             color: #6b4f2a;
+        }
+
+        .container > nav:first-of-type {
+            position: relative;
+            padding-right: 44px;
+        }
+
+        .container > nav:first-of-type .theme-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
         }
 
         .container {
