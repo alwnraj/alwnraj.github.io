@@ -96,7 +96,7 @@
             right: 12px;
             width: 28px;
             height: 28px;
-            border: 1px solid #404040;
+            border: 0;
             background: transparent;
             color: #9ca3af;
             font-size: 14px;
@@ -105,22 +105,24 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: color 0.2s, border-color 0.2s, background 0.2s;
+            transition: color 0.2s, background 0.2s;
         }
 
         .theme-btn:hover {
             color: #60a5fa;
-            border-color: #60a5fa;
+        }
+
+        .theme-btn:focus-visible {
+            outline: 2px solid currentColor;
+            outline-offset: 3px;
         }
 
         body[data-theme="light"] .theme-btn {
-            border-color: #d5c7a3;
             color: #7a6848;
         }
 
         body[data-theme="light"] .theme-btn:hover {
             color: #6b4f2a;
-            border-color: #6b4f2a;
         }
 
         .container {
