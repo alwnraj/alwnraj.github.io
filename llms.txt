@@ -6,7 +6,7 @@
 
 - [Home](https://alwnraj.github.io/): Portfolio overview, biography, research, publications, and projects.
 - [Structured portfolio page](https://alwnraj.github.io/for-llms.html): A concise, machine-readable summary of the portfolio.
-- [Resume](https://alwnraj.github.io/Resume.pdf): Resume and academic background.
+- [Resume](https://alwnraj.github.io/resume.pdf): Resume and academic background.
 
 ## Research and publications
 

@@ -1,0 +1,86 @@
+% Reconstructed from Resume.pdf; the original PDF is preserved.
+% Build: tectonic --outdir output/pdf Resume.tex
+% Also compatible with pdfLaTeX and Overleaf; no custom class is required.
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.4in]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\renewenvironment{itemize}{%
+  \begin{list}{\textbullet}{%
+    \setlength{\leftmargin}{1.5em}%
+    \setlength{\topsep}{5pt}%
+    \setlength{\itemsep}{3pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\partopsep}{0pt}}%
+}{\end{list}}
+
+\newcommand{\resumesection}[1]{%
+  \par\addvspace{10pt}%
+  {\large\bfseries #1}\par\vspace{2pt}\hrule\vspace{5pt}}
+\newcommand{\role}[4]{%
+  \textbf{#1}\hfill #2\\%
+  #3\hfill\textit{#4}\par}
+\newcommand{\project}[2]{\textbf{#1} #2\par\vspace{6pt}}
+
+\begin{document}
+\begin{center}
+  {\LARGE\bfseries ALWIN RAJKUMAR}\\[4pt]
+  Louisville, KY\\[3pt]
+  \href{mailto:a0rajk01@louisville.edu}{a0rajk01@louisville.edu}
+  $\diamond$ \href{https://github.com/alwnraj}{github.com/alwnraj}
+  $\diamond$ \href{https://www.linkedin.com/in/alwinrajkumar/}{linkedin.com/in/alwinrajkumar}
+\end{center}
+\vspace{-5pt}
+
+\resumesection{EDUCATION}
+% Master's subject inferred from the current website; confirm the formal degree title.
+\textbf{Master of Science in Computer Science and Engineering}, University of Louisville\hfill 2026 -- Present\par\vspace{4pt}
+\textbf{Bachelor of Computer Science and Engineering}, University of Louisville\hfill Fall 2022 -- May 2026\\
+Relevant Coursework: Data Structures and Algorithms, Discrete Structures, Embedded Systems.\hfill GPA: 3.5
+
+\resumesection{SKILLS}
+\textbf{Technical Skills: Python, C/C++, Flask, Java, MySQL, Git, Github, Ubuntu, Excel, Javascript}
+
+\resumesection{EXPERIENCE}
+\role{Undergraduate Research Assistant}{Jan 2024 -- Present}
+  {Louisville Automation and Robotics Research Institute}{Louisville, KY}
+\begin{itemize}
+  \item Developed computer vision algorithms (object classification, VSLAM, feature extraction) for drone ML systems using Python and PyTorch.
+  \item Built, designed and deployed main AIMS lab website for Dr.Baidya.
+  \item Awarded a grant under the Summer Research Opportunity Program (SROP) to conduct independent research and present findings through a research poster.
+\end{itemize}
+
+\role{BFEA Program Ambassador \& Mentor}{Jul 2025 -- Jul 2025}
+  {University of Louisville}{Louisville, KY}
+\begin{itemize}
+  \item Mentored incoming engineering students in a two-week pre-college program (July 13--24)
+  \item Facilitated team challenges, workshops, and social activities on and off campus
+  \item Coordinated with staff to manage transitions and sustain program flow
+  \item Supported setup, teardown, and daily operations (16 hrs) across classrooms, labs, residence halls, and off-site venues
+\end{itemize}
+
+\role{Undergraduate Research Assistant}{Jan 2024 -- Present}
+  {Leap Lab - University of Louisville}{Louisville, KY}
+\begin{itemize}
+  \item Co-authored ``Expertise and Trust in GenAI,'' examining engineering students' trust in generative AI.
+  \item Managed data collection and analysis, utilizing Excel to sort and prepare data for the data pipeline, ensuring accurate and organized data flow throughout the research process.
+\end{itemize}
+
+\resumesection{PROJECTS}
+\project{2D Retro Space Invaders (C++, Raylib):}{Developed a fully functional Space Invaders game in C++ using Raylib, implementing collision detection, scoring, and game physics. Source Code: \href{https://github.com/alwnraj/Space-invaders}{GitHub}}
+% This link is reproduced from the original PDF, despite its unrelated repository name.
+\project{AI Flashcard Generator (Typescript, Tailwind):}{Made a flashcard generator that leverages Google's Gemini to create flashcards from prompts, text, or PDFs. \href{https://github.com/alwnraj/MLS-binary-search}{GitHub}}
+\project{Real-Time Chat App (Flask, Python, Socket.IO):}{Built a web-based real-time chat app with group chats and access code-based rooms, using Flask, Python, and Socket.IO. Source Code: \href{https://github.com/alwnraj/chat-app}{GitHub}}
+\vspace{-6pt}
+
+\resumesection{LEADERSHIP}
+\role{Operations Vice President}{July 2024 -- May 2025}
+  {Speed School Student Council}{}
+\begin{itemize}
+  \item Served as a Student Government Association Senator.
+  \item Authored a weekly newsletter that reached 3,000 engineering students.
+  \item Coordinated Council communications through minutes of meetings.
+\end{itemize}
+\end{document}
