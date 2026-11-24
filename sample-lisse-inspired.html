@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#f7f6f2" />
+    <meta name="description" content="Alwin Rajkumar — computer science and engineering student working in AI research, computer vision, and software." />
+    <title>Alwin Rajkumar — research + software</title>
+    <link rel="icon" type="image/webp" href="images/my-notion-face-transparent.webp" />
+    <style>
+        :root {
+            --bg: #f7f6f2;
+            --ink: #73574a;
+            --ink-strong: #584237;
+            --muted: #aaa69e;
+            --muted-strong: #948b83;
+            --divider-from: rgba(115, 87, 74, 0.16);
+            --divider-to: rgba(115, 87, 74, 0.02);
+            --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+            --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            min-width: 320px;
+            overflow-x: hidden;
+            background: var(--bg);
+            color: var(--ink);
+            font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-size: 14px;
+            line-height: 1.4;
+            letter-spacing: -0.015em;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        ::selection { background: var(--ink); color: var(--bg); }
+        a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+        button { font: inherit; }
+
+        :focus-visible {
+            outline: 2px solid var(--ink);
+            outline-offset: 4px;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .skip-link {
+            position: fixed;
+            top: 12px;
+            left: 12px;
+            z-index: 10;
+            padding: 8px 10px;
+            background: var(--ink);
+            color: var(--bg);
+            transform: translateY(-180%);
+            transition: transform 180ms var(--ease-out-quart);
+        }
+
+        .skip-link:focus { transform: translateY(0); }
+
+        .page {
+            width: min(510px, calc(100vw - 32px));
+            margin: 0 auto;
+            padding: 80px 0 64px;
+        }
+
+        .stack {
+            display: flex;
+            flex-direction: column;
+            gap: 36px;
+        }
+
+        .definition {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .term-block {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .term {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            color: var(--ink-strong);
+            white-space: nowrap;
+        }
+
+        .term h1,
+        .term p,
+        .definition-list p,
+        .intro,
+        .section-copy,
+        .project-row p { margin: 0; }
+
+        .term h1 {
+            font-size: 16px;
+            font-weight: 650;
+            line-height: 1;
+            letter-spacing: -0.025em;
+        }
+
+        .term p {
+            font-size: 14px;
+            font-weight: 470;
+            line-height: 1;
+        }
+
+        .definition-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-left: 8px;
+            color: var(--muted);
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        .definition-list p:nth-child(3) { padding-left: 8px; }
+
+        .definition-list .number {
+            display: inline-block;
+            min-width: 13px;
+            color: var(--muted-strong);
+            font-weight: 650;
+        }
+
+        .definition-list em,
+        .term em { font-style: italic; }
+
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, var(--divider-from), var(--divider-to));
+        }
+
+        .intro {
+            color: var(--ink);
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .intro a,
+        .section-copy a,
+        .project-row a { text-decoration-color: rgba(115, 87, 74, 0.48); }
+
+        .intro a:hover,
+        .section-copy a:hover,
+        .project-row a:hover { text-decoration-color: var(--ink); }
+
+        .info-sections { display: flex; flex-direction: column; gap: 30px; padding-top: 2px; }
+
+        .section-heading { margin: 0 0 10px; color: var(--ink-strong); font-size: 14px; font-weight: 650; }
+
+        .section-copy { color: var(--muted-strong); line-height: 1.46; }
+
+        .project-list { display: flex; flex-direction: column; gap: 0; }
+
+        .project-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 12px;
+            align-items: center;
+            padding: 11px 0;
+            border-top: 1px solid rgba(115, 87, 74, 0.10);
+            color: var(--muted-strong);
+        }
+
+        .project-row:last-child { border-bottom: 1px solid rgba(115, 87, 74, 0.10); }
+
+        .project-row a { font-weight: 600; text-decoration: none; }
+        .project-row a:hover { text-decoration: underline; }
+        .project-row p { font-size: 12px; text-align: right; }
+
+        footer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding-top: 2px;
+            color: var(--muted-strong);
+            font-size: 13px;
+        }
+
+        footer a { text-decoration-color: rgba(115, 87, 74, 0.36); }
+
+        .reveal {
+            opacity: 0;
+            filter: blur(4px);
+            transform: translateY(8px);
+            animation: settle 700ms var(--ease-out-quint) forwards;
+        }
+
+        .reveal:nth-child(1) { animation-delay: 90ms; }
+        .reveal:nth-child(2) { animation-delay: 170ms; }
+        .reveal:nth-child(3) { animation-delay: 250ms; }
+        .reveal:nth-child(4) { animation-delay: 330ms; }
+
+        @keyframes settle {
+            to { opacity: 1; filter: blur(0); transform: translateY(0); }
+        }
+
+        @media (max-width: 560px) {
+            .page { padding-top: 24px; }
+            .term { flex-wrap: wrap; gap: 4px 8px; white-space: normal; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            .reveal { opacity: 1; filter: none; transform: none; }
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <main class="page" id="content">
+        <div class="stack">
+            <header class="definition reveal">
+                <div class="term-block">
+                    <div class="term" role="group" aria-labelledby="alwin-heading">
+                        <h1 id="alwin-heading">alwin rajkumar</h1>
+                        <p>/ˈæl-wɪn/ <em>n.</em> [<em>CS</em>, <em>AI/ML</em>]</p>
+                    </div>
+                    <div class="definition-list">
+                        <p><span class="number">1</span> computer science &amp; engineering student at the University of Louisville.</p>
+                        <p><span class="number">2</span> research assistant working in computer vision, drone perception, and generative AI.</p>
+                        <p><span class="number">b</span> builder of small, useful software in Python, C++, and JavaScript.</p>
+                        <p><span class="number">3</span> curious about hard problems and thoughtful, practical solutions.</p>
+                    </div>
+                </div>
+                <div class="divider" role="separator"></div>
+            </header>
+
+            <section class="reveal" aria-labelledby="intro-heading">
+                <h2 id="intro-heading" class="sr-only">About Alwin</h2>
+                <p class="intro">I’m Alwin Rajkumar — a University of Louisville student working across drone perception, computer vision, generative AI, and small useful software. This is a small index of my <a href="#projects">projects</a>, <a href="#research">research</a>, and the work I’m looking for next.</p>
+            </section>
+
+            <div class="info-sections reveal">
+                <section id="research" aria-labelledby="research-heading">
+                    <h2 class="section-heading" id="research-heading">Research &amp; publications</h2>
+                    <p class="section-copy">At the Louisville Automation &amp; Robotics Research Institute, I design computer vision pipelines for drone-based perception and localization. I also co-author research on GenAI expertise, trust, and programming outcomes with <a href="https://engineering.louisville.edu/faculty/campbell-bego/" target="_blank" rel="noreferrer">Dr. Bego</a> and work on drone vision with <a href="https://engineering.louisville.edu/faculty/sabur-h-baidya/" target="_blank" rel="noreferrer">Dr. Baidya</a>.</p>
+                    <div class="project-list" aria-label="Research publications">
+                        <div class="project-row"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=WreVjDMAAAAJ&amp;citation_for_view=WreVjDMAAAAJ:u5HHmVD_uO8C" target="_blank" rel="noreferrer">First-Year Engineering Students’ Expertise and Trust in GenAI</a><p>GenAI · engineering education ↗</p></div>
+                        <div class="project-row"><a href="https://doi.org/10.1109/FIE63693.2025.11328708" target="_blank" rel="noreferrer">The Impact of a GenAI Integration on First-Year Engineering Students’ Programming Outcomes</a><p>FIE 2025 ↗</p></div>
+                        <div class="project-row"><a href="https://doi.org/10.1109/FIE63693.2025.11328245" target="_blank" rel="noreferrer">Evaluating GenAI Information Literacy from a Programming Documentation File</a><p>Work in progress ↗</p></div>
+                    </div>
+                </section>
+
+                <section id="projects" aria-labelledby="projects-heading">
+                    <h2 class="section-heading" id="projects-heading">Selected projects</h2>
+                    <p class="section-copy">A few open-source experiments and useful tools built with Python, C++, JavaScript, and a lot of curiosity.</p>
+                    <div class="project-list" aria-label="Selected projects">
+                        <div class="project-row"><a href="https://github.com/alwnraj/AIMSLab-crazyflie" target="_blank" rel="noreferrer">Crazyflie Figure-8 Flight with OptiTrack</a><p>drone perception ↗</p></div>
+                        <div class="project-row"><a href="https://github.com/alwnraj/ResearchBuddy" target="_blank" rel="noreferrer">Research Buddy</a><p>PDF + Gemini ↗</p></div>
+                        <div class="project-row"><a href="https://alwnraj.github.io/smolmachine/" target="_blank" rel="noreferrer">SmolMachine</a><p>MobileNet ↗</p></div>
+                        <div class="project-row"><a href="https://flashcardgen.pages.dev/" target="_blank" rel="noreferrer">AI Flashcard Generator</a><p>learning tool ↗</p></div>
+                        <div class="project-row"><a href="https://github.com/alwnraj/asmcalc" target="_blank" rel="noreferrer">AsmCalc</a><p>x86 + C ↗</p></div>
+                    </div>
+                </section>
+
+                <section aria-labelledby="contact-heading">
+                    <h2 class="section-heading" id="contact-heading">Currently looking for</h2>
+                    <p class="section-copy">Thoughtful internships, research collaborations, and teams building useful things. <a href="mailto:a0rajk01@louisville.edu">Get in touch ↗</a></p>
+                </section>
+            </div>
+
+            <footer class="reveal">
+                <a href="mailto:a0rajk01@louisville.edu">email</a>
+                <a href="https://github.com/alwnraj" target="_blank" rel="noreferrer">github</a>
+                <a href="https://www.linkedin.com/in/alwinrajkumar/" target="_blank" rel="noreferrer">linkedin</a>
+                <a href="resume.pdf" target="_blank" rel="noreferrer">resume</a>
+                <a href="https://alwnraj.github.io/blog/" target="_blank" rel="noreferrer">blog :)</a>
+            </footer>
+        </div>
+    </main>
+
+</body>
+</html>

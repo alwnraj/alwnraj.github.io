@@ -1,0 +1,78 @@
+% Tailored to the Spring 2027 Institutional Effectiveness GRA posting.
+% Content is drawn from Resume.tex; titles, dates, and degree details are retained.
+% Build: tectonic --outdir output/pdf Resume-IE-GRA.tex
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.65in]{geometry}
+\usepackage[colorlinks=true,urlcolor=black]{hyperref}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\renewenvironment{itemize}{%
+  \begin{list}{\textbullet}{%
+    \setlength{\leftmargin}{1.4em}%
+    \setlength{\topsep}{5pt}%
+    \setlength{\itemsep}{4pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\partopsep}{0pt}}%
+}{\end{list}}
+\newcommand{\resumesection}[1]{%
+  \par\addvspace{12pt}%
+  {\large\bfseries #1}\par\vspace{3pt}\hrule\vspace{6pt}}
+\newcommand{\role}[4]{%
+  \textbf{#1}\hfill #2\\%
+  #3\hfill\textit{#4}\par}
+
+\begin{document}
+\begin{center}
+  {\LARGE\bfseries ALWIN RAJKUMAR}\\[4pt]
+  Louisville, KY \enspace $\vert$ \enspace
+  \href{mailto:a0rajk01@louisville.edu}{a0rajk01@louisville.edu}\\[3pt]
+  \href{https://www.linkedin.com/in/alwinrajkumar/}{linkedin.com/in/alwinrajkumar}
+  \enspace $\vert$ \enspace
+  \href{https://github.com/alwnraj}{github.com/alwnraj}
+\end{center}
+\vspace{-7pt}
+
+\resumesection{EDUCATION}
+\textbf{University of Louisville}\hfill Louisville, KY\\[3pt]
+Master of Science in Computer Science and Engineering\hfill 2026 -- Present\\[3pt]
+Bachelor of Computer Science and Engineering\hfill Fall 2022 -- May 2026\\[3pt]
+Undergraduate GPA: 3.5
+
+\resumesection{SKILLS}
+\textbf{Data and analysis:} Excel, MySQL, Python\\[3pt]
+\textbf{Additional technical skills:} C/C++, Java, JavaScript, Flask, Git, GitHub, Ubuntu
+
+\resumesection{RESEARCH EXPERIENCE}
+\role{Undergraduate Research Assistant}{Jan 2024 -- Present}
+  {Leap Lab -- University of Louisville}{Louisville, KY}
+\begin{itemize}
+  \item Managed research data collection and analysis; used Excel to sort and prepare data for the research pipeline.
+  \item Co-authored ``Expertise and Trust in GenAI,'' examining engineering students' trust in generative AI.
+\end{itemize}
+\vspace{4pt}
+\role{Undergraduate Research Assistant}{Jan 2024 -- Present}
+  {Louisville Automation and Robotics Research Institute}{Louisville, KY}
+\begin{itemize}
+  \item Awarded a Summer Research Opportunity Program (SROP) grant to conduct independent research and present findings through a research poster.
+  \item Developed computer vision algorithms for drone machine learning systems using Python and PyTorch, including object classification, VSLAM, and feature extraction.
+  \item Designed, built, and deployed the AIMS lab website for Dr. Baidya.
+\end{itemize}
+
+\resumesection{UNIVERSITY LEADERSHIP AND PROGRAM EXPERIENCE}
+\role{Operations Vice President}{July 2024 -- May 2025}
+  {Speed School Student Council}{}
+\begin{itemize}
+  \item Authored a weekly newsletter reaching 3,000 engineering students.
+  \item Documented meeting minutes to support Council communications.
+  \item Served as a Student Government Association Senator.
+\end{itemize}
+\vspace{4pt}
+\role{BFEA Program Ambassador \& Mentor}{July 2025}
+  {University of Louisville}{Louisville, KY}
+\begin{itemize}
+  \item Mentored incoming engineering students during a two-week pre-college program.
+  \item Coordinated with staff to manage transitions and facilitated team challenges, workshops, and social activities on and off campus.
+  \item Supported setup, teardown, and daily operations across classrooms, labs, residence halls, and off-site venues.
+\end{itemize}
+\end{document}

@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fbf8f5" />
+    <meta name="description" content="Alwin Rajkumar — computer science and engineering student working in AI research, computer vision, and software." />
+    <title>Alwin Rajkumar</title>
+    <style>
+        :root {
+            --background: #fbf8f5;
+            --ink: #5a4035;
+            --soft-ink: #80675b;
+            --faint-ink: #a0897e;
+            --line: #ede4de;
+            --label: Georgia, "Times New Roman", serif;
+            --body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        }
+
+        * { box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            min-width: 320px;
+            background: var(--background);
+            color: var(--ink);
+            font-family: var(--body);
+            font-size: 15px;
+            line-height: 1.45;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        ::selection { color: var(--background); background: var(--ink); }
+
+        a { color: inherit; }
+
+        :focus-visible {
+            outline: 2px solid var(--ink);
+            outline-offset: 4px;
+        }
+
+        .skip-link {
+            position: fixed;
+            top: 12px;
+            left: 12px;
+            z-index: 2;
+            padding: 8px 10px;
+            background: var(--ink);
+            color: var(--background);
+            transform: translateY(-160%);
+        }
+
+        .skip-link:focus { transform: translateY(0); }
+
+        .page {
+            width: min(calc(100% - 40px), 510px);
+            margin: 0 auto;
+            padding: 82px 0 64px;
+        }
+
+        .masthead {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: start;
+            gap: 20px;
+        }
+
+        .wordmark {
+            width: fit-content;
+            font-family: var(--label);
+            font-size: 27px;
+            font-style: italic;
+            font-weight: 600;
+            letter-spacing: -.09em;
+            line-height: 1;
+            text-decoration: none;
+        }
+
+        .updated {
+            margin: 4px 0 0;
+            color: var(--soft-ink);
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        .intro {
+            max-width: 510px;
+            margin: 40px 0 42px;
+            color: var(--ink);
+            font-size: 15px;
+            letter-spacing: -.015em;
+            line-height: 1.42;
+        }
+
+        .intro a,
+        .profile-links a {
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+
+        .group + .group { margin-top: 39px; }
+
+        .group-title {
+            margin: 0 0 15px;
+            font-family: var(--label);
+            font-size: 20px;
+            font-style: italic;
+            font-weight: 700;
+            letter-spacing: -.055em;
+            line-height: 1;
+        }
+
+        .list { border-top: 1px solid var(--line); }
+
+        .row {
+            display: grid;
+            grid-template-columns: 60px minmax(0, 1fr) auto;
+            gap: 18px;
+            align-items: center;
+            min-height: 58px;
+            border: 0;
+            border-bottom: 1px solid var(--line);
+            padding: 6px 0;
+            color: inherit;
+            background: transparent;
+            font: inherit;
+            text-align: left;
+            text-decoration: none;
+            transition: color .24s ease;
+        }
+
+        a.row,
+        button.row { cursor: pointer; }
+
+        .row:hover,
+        .row:focus-visible { color: var(--soft-ink); }
+
+        .row-title {
+            min-width: 0;
+            font-size: 15px;
+            line-height: 1.2;
+        }
+
+        .row-date {
+            color: var(--soft-ink);
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        .thumbnail {
+            position: relative;
+            display: block;
+            width: 56px;
+            height: 36px;
+            border: 1px solid rgba(90, 64, 53, .14);
+            background: #eee9e2;
+            box-shadow: 2px 2px 0 var(--background), 3px 3px 0 rgba(90, 64, 53, .13);
+            object-fit: cover;
+            transform: rotate(-1.5deg);
+            transition: transform .35s cubic-bezier(.22, 1, .36, 1), box-shadow .35s ease;
+        }
+
+        .thumbnail::before,
+        .thumbnail::after {
+            position: absolute;
+            z-index: -1;
+            inset: -3px 2px 2px -3px;
+            border: 1px solid rgba(90, 64, 53, .11);
+            content: "";
+            background: transparent;
+        }
+
+        .thumbnail::after { transform: translate(2px, 2px); }
+
+        .row:hover .thumbnail,
+        .row:focus-visible .thumbnail {
+            box-shadow: 4px 4px 0 var(--background), 5px 5px 0 rgba(90, 64, 53, .16);
+            transform: rotate(1.5deg) translateY(-1px) scale(1.025);
+        }
+
+        .vision-thumbnail {
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            color: #71655d;
+            background: linear-gradient(135deg, #e8e1da 0 46%, #c9d2d0 46% 52%, #eee9e2 52%);
+            font-family: var(--label);
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        .vision-thumbnail span { transform: rotate(-12deg); }
+
+        .flash-thumbnail { object-position: center; }
+
+        .arrow {
+            display: inline-block;
+            margin-left: 2px;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1;
+            transform: translateX(0);
+            transition: transform .25s ease;
+        }
+
+        .row:hover .arrow,
+        .row:focus-visible .arrow { transform: translateX(3px); }
+
+        .more-row { width: 100%; }
+
+        .more-row .row-date { display: flex; align-items: center; gap: 8px; }
+
+        .extra-rows[hidden] { display: none; }
+
+        .extra-rows { animation: reveal .32s ease both; }
+
+        .profile-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+            margin-top: 40px;
+            color: var(--soft-ink);
+            font-size: 12px;
+        }
+
+        .profile-links a { text-decoration: none; }
+        .profile-links a:hover,
+        .profile-links a:focus-visible { color: var(--ink); text-decoration: underline; }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(5px);
+            animation: fade-in .6s ease forwards;
+        }
+
+        .delay-1 { animation-delay: .06s; }
+        .delay-2 { animation-delay: .12s; }
+        .delay-3 { animation-delay: .18s; }
+        .delay-4 { animation-delay: .24s; }
+
+        @keyframes fade-in {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes reveal {
+            from { opacity: 0; transform: translateY(-4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 560px) {
+            .page { padding-top: 42px; }
+        }
+
+        @media (max-width: 400px) {
+            .page { width: min(calc(100% - 28px), 510px); }
+            .row { grid-template-columns: 56px minmax(0, 1fr) auto; gap: 12px; }
+            .thumbnail { width: 52px; height: 34px; }
+            .row-date { font-size: 11px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
+            }
+            .fade-in { opacity: 1; transform: none; }
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page">
+        <header class="masthead fade-in" id="top">
+            <a class="wordmark" href="#top" aria-label="Alwin Rajkumar home">Alwin</a>
+            <p class="updated">Updated Aug 2026</p>
+        </header>
+
+        <main id="main">
+            <p class="intro fade-in delay-1">
+                I’m a computer science and engineering student at the University of Louisville. I work on computer vision, generative AI, and small software tools — mostly trying to make difficult things feel a little clearer. I share projects on <a href="https://github.com/alwnraj" target="_blank" rel="noreferrer">GitHub</a> and research through <a href="https://scholar.google.com/citations?user=WreVjDMAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Google Scholar</a>.
+            </p>
+
+            <section class="group fade-in delay-2" aria-labelledby="work-title">
+                <h2 class="group-title" id="work-title">work</h2>
+                <div class="list">
+                    <a class="row" href="https://github.com/alwnraj/ResearchBuddy" target="_blank" rel="noreferrer">
+                        <img class="thumbnail" src="images/researchbuddy.webp" alt="ResearchBuddy interface" loading="lazy" decoding="async" />
+                        <span class="row-title">ResearchBuddy</span>
+                        <span class="row-date">2024</span>
+                    </a>
+                    <a class="row" href="https://github.com/alwnraj/AIMSLab-crazyflie" target="_blank" rel="noreferrer">
+                        <span class="thumbnail vision-thumbnail" aria-hidden="true"><span>◎</span></span>
+                        <span class="row-title">Crazyflie Figure-8</span>
+                        <span class="row-date">2024</span>
+                    </a>
+                    <a class="row" href="https://github.com/alwnraj/macmemory" target="_blank" rel="noreferrer">
+                        <img class="thumbnail" src="images/macmemory.webp" alt="MacMemory menu bar app" loading="lazy" decoding="async" />
+                        <span class="row-title">MacMemory</span>
+                        <span class="row-date">2023</span>
+                    </a>
+                    <a class="row" href="https://github.com/alwnraj/flashcardgen" target="_blank" rel="noreferrer">
+                        <img class="thumbnail flash-thumbnail" src="images/aiflashcard.webp" alt="AI Flashcard Generator interface" loading="lazy" decoding="async" />
+                        <span class="row-title">AI Flashcard Generator</span>
+                        <span class="row-date">2023</span>
+                    </a>
+                    <button class="row more-row" type="button" aria-expanded="false" aria-controls="more-work">
+                        <span class="thumbnail vision-thumbnail" aria-hidden="true"><span>+</span></span>
+                        <span class="row-title">More</span>
+                        <span class="row-date"><span class="more-label">view</span><span class="arrow" aria-hidden="true">›</span></span>
+                    </button>
+                    <div class="extra-rows" id="more-work" hidden>
+                        <a class="row" href="https://github.com/alwnraj/asmcalc" target="_blank" rel="noreferrer">
+                            <span class="thumbnail vision-thumbnail" aria-hidden="true"><span>∑</span></span>
+                            <span class="row-title">Assembly &amp; C Calculator</span>
+                            <span class="row-date">2022</span>
+                        </a>
+                        <a class="row" href="https://github.com/alwnraj/chat-app" target="_blank" rel="noreferrer">
+                            <img class="thumbnail" src="images/chatapp.webp" alt="Real-time chat application" loading="lazy" decoding="async" />
+                            <span class="row-title">Real-Time Chat</span>
+                            <span class="row-date">2022</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="group fade-in delay-3" aria-labelledby="research-title">
+                <h2 class="group-title" id="research-title">research</h2>
+                <div class="list">
+                    <a class="row" href="https://scholar.google.com/citations?user=WreVjDMAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">
+                        <span class="thumbnail vision-thumbnail" aria-hidden="true"><span>✦</span></span>
+                        <span class="row-title">Expertise and Trust in GenAI</span>
+                        <span class="row-date">2025</span>
+                    </a>
+                    <a class="row" href="https://scholar.google.com/citations?user=WreVjDMAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">
+                        <span class="thumbnail vision-thumbnail" aria-hidden="true"><span>⌁</span></span>
+                        <span class="row-title">GenAI &amp; Programming Outcomes</span>
+                        <span class="row-date">2025</span>
+                    </a>
+                    <a class="row" href="https://scholar.google.com/citations?user=WreVjDMAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">
+                        <span class="thumbnail vision-thumbnail" aria-hidden="true"><span>◌</span></span>
+                        <span class="row-title">Computer Vision for Drones</span>
+                        <span class="row-date">ongoing</span>
+                    </a>
+                    <button class="row more-row" type="button" aria-expanded="false" aria-controls="more-research">
+                        <span class="thumbnail vision-thumbnail" aria-hidden="true"><span>+</span></span>
+                        <span class="row-title">More</span>
+                        <span class="row-date"><span class="more-label">view</span><span class="arrow" aria-hidden="true">›</span></span>
+                    </button>
+                    <div class="extra-rows" id="more-research" hidden>
+                        <a class="row" href="mailto:a0rajk01@louisville.edu">
+                            <span class="thumbnail vision-thumbnail" aria-hidden="true"><span>✉</span></span>
+                            <span class="row-title">Talk about research</span>
+                            <span class="row-date">email</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <nav class="profile-links fade-in delay-4" aria-label="Profile links">
+                <a href="mailto:a0rajk01@louisville.edu">email</a>
+                <a href="https://github.com/alwnraj" target="_blank" rel="noreferrer">github</a>
+                <a href="https://www.linkedin.com/in/alwinrajkumar/" target="_blank" rel="noreferrer">linkedin</a>
+            </nav>
+        </main>
+    </div>
+
+    <script>
+        (() => {
+            document.querySelectorAll('.more-row').forEach((button) => {
+                button.addEventListener('click', () => {
+                    const target = document.getElementById(button.getAttribute('aria-controls'));
+                    const expanded = button.getAttribute('aria-expanded') === 'true';
+                    button.setAttribute('aria-expanded', String(!expanded));
+                    target.hidden = expanded;
+                    button.querySelector('.more-label').textContent = expanded ? 'view' : 'hide';
+                    button.querySelector('.arrow').textContent = expanded ? '›' : '⌃';
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
